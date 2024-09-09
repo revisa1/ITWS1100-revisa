@@ -1,2 +1,2 @@
 # itws1100-rplotka
-##rplotka and mojiso=bruno
+## rplotka and mojiso=bruno
