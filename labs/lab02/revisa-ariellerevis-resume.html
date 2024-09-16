@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-   <meta content="charset=UTF-8" />
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
    <title>arielleRevisResume</title>
 
 
-
-   <style type="text/css">
+<!-- style body for all css selections -->
+   <style>
      
      *{
          box-sizing: border-box;
@@ -46,7 +46,7 @@
       .contactInfo .nLinks {
          display: flex;
          justify-content: center;
-         flex-shrink: nowrap;
+         flex-wrap: nowrap;
          font-family: 'Times New Roman';
          padding:14px 7px;
       }
@@ -62,12 +62,14 @@
          margin: 0;
       }
 
+      /* creates an uneven split between the side bar and the main body */
       .side {
          flex: 30%;
          background-color: rgb(230, 226, 226);
          padding:20px;     
       }
 
+      /* creates an uneven split between the side bar and the main body */
       .main{
          flex:70%;
          background-color:white;
@@ -100,9 +102,35 @@
          font-family: 'Times New Roman';
       }
 
+      /* creates a div with a border line at the bottom as a design 
+      seperator block between different sections of resume */
       .line{
          border-bottom: 1px solid black;
       }
+      /* move the dates on the side bar all the way to the right */
+      .side .sBar{
+         margin: 0 0 0 50px;
+      }
+      /* fix the formatting for the date for CS1 */
+      .side #CS1{
+       margin: 0 0 0 100px;  
+      }
+
+      /* move the dates in the right-body all the way to the right */
+      .main .mBar{
+         margin: 0 0 0 730px;
+      }
+
+      /* fix the formatting for the dates for Playa Bowls */
+      .main #PB{
+         margin: 0 0 0 630px;
+      }
+
+      /* fix the formatting for the dates for East Brunswick High School*/
+      .main #EBHS{
+         margin: 0 0 0 760px;
+      }
+      
    </style>
 </head>
 
@@ -120,30 +148,33 @@
       <div class="links"><a href="https://www.linkedin.com/in/arielle-revis/">Linkedin.com/ariellerevis</a></div>
    </div>
 
-   <div class="row">
-      <div class="side">
+   <div class="row"><!-- div for under the page header and contact info -->
+      
+      <!-- div for the left-hand side bar -->
+      <div class="side"> 
          <div id="resumePhoto">
-            <img src="https://media.licdn.com/dms/image/v2/D4D03AQFxEnYAIFJZOQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725841979455?e=1731542400&v=beta&t=rq8hsgDskGpl8MHmefCdBdSDXvDcGDL3Dl2R6v85PWg">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQFxEnYAIFJZOQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725841979455?e=1731542400&v=beta&t=rq8hsgDskGpl8MHmefCdBdSDXvDcGDL3Dl2R6v85PWg" alt="Personal Resume Professional Photo of Arielle">
          </div>
             <h3>RELEVANT COURSEWORK</h3>
-            <p><strong>Intro to IT & Web Science</strong>&emsp;&emsp;&emsp;&emsp;<em>Fall 2024 - Present</em></p>
+            <p><strong>Intro to IT & Web Science</strong><em class="sBar">Fall 2024 - Present</em></p>
             <p>Actively developing skills in DevOps, Computer Networking, GitHub, Repositories, Databases, Cybersecurity, E-commerce and Design, Quantum, and Generative AI</p>
-            <p><strong>Computer Science I</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<em>Fall 2024 - Present</em></p>
+            <p><strong>Computer Science I</strong><em id="CS1">Fall 2024 - Present</em></p>
             <p>Ongoing refinement of computational thinking, problem-solving, small-scale programming, and applications including web-centric computing, image processing, numerical computing, and graphics.<p>
-            <p><strong>AP Computer Science Principles</strong>&emsp;&emsp;&emsp;<em>Spring 2024</em></p>
+            <p><strong>AP Computer Science Principles</strong><em class="sBar">Spring 2024</em></p>
             <p>Mastery of design and application of computer science concepts to solve problems through the development of algorithms and programs. Explored abstraction and computing innovations and systems, their potential impacts, and ethical computing culture.<p>      
       </div> 
-      
+
+         <!-- div for the right-hand main body -->
          <div class="main">
             <h3>OBJECTIVE</h3>
             <p>Current student at Rensselaer Polytechnic Institute seeking a full-time, summer 2025 internship in the field of Information Technology.</p>
             <div class="line"></div>
             <h3>EDUCATION</h3>
-            <p><strong>Rensselaer Polytechnic Institute</strong> (RPI), Troy, NY<br>Bachelor of Science, Information Technology & Web Science<br>Focus Track: Information Security &emsp;&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;May 2024 - Present</em></p> 
-            <p><strong>East Brunswick High School</strong>, East Brunswick, NJ<br>High Honors Diploma<br>GPA 4.35/4.0&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<em>Jun. 2024</em></p>
+            <p><strong>Rensselaer Polytechnic Institute</strong> (RPI), Troy, NY<br>Bachelor of Science, Information Technology & Web Science<br>Focus Track: Information Security<em class="mBar">May 2024 - Present</em></p> 
+            <p><strong>East Brunswick High School</strong>, East Brunswick, NJ<br>High Honors Diploma<br>GPA 4.35/4.0<em id="EBHS">Jun. 2024</em></p>
             <div class="line"></div>
             <h3>EXPERIENCE</h3>
-            <p><strong>Generative AI and Cybersecurity Research Assistant</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<em>Aug. 2024 - Present</em></p>
+            <p><strong>Generative AI and Cybersecurity Research Assistant</strong><em class="mBar">Aug. 2024 - Present</em></p>
             <ul>
                <li>Accurately gathered and organized 90+ data points on human subjects on their knowledge of Cybersecurity before and after an administered training.</li>
                <li>Analyzed large datasets to identify patterns and vulnerabilities in RPI student, faculty, and staff’s knowledge of Cybersecurity concepts.</li>
@@ -151,7 +182,7 @@
                <li>Co-Authored research papers and technical reports on the research findings and advancements.</li>
             </ul>
             <p>
-               <strong>Playa Bowls Employee</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<em>Jun. 2022 - Aug. 2024</em>
+               <strong>Playa Bowls Employee</strong><em id="PB">Jun. 2022 - Aug. 2024</em>
             </p>
             <ul>
                <li>Collaborated and communicated with team members to ensure efficient workflow and positive work atmosphere.</li>

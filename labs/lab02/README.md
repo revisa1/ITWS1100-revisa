@@ -25,3 +25,17 @@ You can open the appropriate folder by clicking the link in GitHub Desktop for F
 5. start your Azure instances
 6. pull your changes down to your web servers
 7. Test your resume in FQDN/iit/labs/lab02 
+
+Layout Inspiration:https://www.w3schools.com/css/tryit.asp?filename=trycss3_flexbox_website2
+
+Box sizing border box:https://www.w3schools.com/csS/css3_box-sizing.asp
+
+tabs: https://www.geeksforgeeks.org/how-to-insert-spaces-tabs-in-text-using-html-css/
+
+flexbox: https://www.w3schools.com/css/css3_flexbox_container.asp
+
+html reference: https://www.w3schools.com/tags/ref_byfunc.asp
+
+css reference: https://www.w3schools.com/cssref/index.php
+
+images: https://www.w3schools.com/css/css3_images.asp
