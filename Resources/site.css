@@ -1,0 +1,254 @@
+* {
+   box-sizing: border-box;
+ }
+
+
+.lora-font {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body{
+   background-color:rgb(66, 66, 115);
+}
+
+.header {
+   display:flex;
+   flex-direction:row;
+   align-items:center;
+   background-color:black;
+ }
+
+ .header a{
+   flex:10%;
+   justify-content:left;
+   width:4%;
+   height:auto;
+   margin:5px;
+   background-color:black;
+ }
+
+ .header .headerContents{
+   flex:90%;
+   flex-direction:column;
+   font-family:'Lora';
+   background-color:black;
+   color:white;
+ }
+
+.navbar {
+    display:flex;
+    flex:row;
+    justify-content:space-evenly;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    background-color: rgb(107, 107, 224);
+    font-family:'Lora';
+    font-size:1.4em;
+ }
+ 
+.navbar a{
+   display:block;
+   padding:14px 16px;
+   margin:0px;
+} 
+.navbar a:link{
+    text-decoration:none;
+    color:white;
+ }
+
+.navbar a:visited{
+    color: white;
+}
+
+.navbar a:hover{ 
+   color: white;
+   font-style:italic;
+   text-decoration-line:underline;
+ }
+
+.prjtLabs{
+   float:left;
+   overflow:hidden;
+}
+
+.prjtLabs .prjtLabsBtn{
+   font-size:1em;
+   border:none;
+   padding: 14px 16px;
+   background-color:inherit;
+   font-family:inherit;
+   color:white;
+}
+
+.navbar a:hover, .prjtLabs:hover .prjtLabsBtn{
+   background-color: rgba(0, 0, 0, 0.788);
+}
+
+.prjtLabsContent{
+   display: none;
+   position:absolute;
+   left:0px;
+   background-color: rgba(0, 0, 0, 0.788);
+   width:100%;
+   z-index:1;
+}
+
+.prjtLabsContent a{
+   float:left;
+   color:white;
+   text-decoration:none;
+   padding:14px 16px; 
+}
+
+.prjtLabsContent a:hover{
+   color: black;
+   font-style:italic;
+   text-decoration-line:underline;
+   background-color:white;
+}
+
+.prjtLabs:hover .prjtLabsContent{
+   display:block;
+}
+
+.justText{
+   display:flex;
+   justify-content:center;
+   padding:5%
+}
+
+img {
+   width: 65%;
+   height:auto;
+   border: 1px white;
+   border-radius: 24px;
+   padding:4px;
+   margin-top:3%;
+   margin-bottom:3%;
+   box-shadow: 0 4px 8px 0 white;
+}
+
+
+ h1{
+    font-size:2.8em;
+    padding:0px;
+    margin:20px 0 0px;
+    color:white;
+ }
+
+ h2{
+    padding: 0 0 3;
+    font-size:1.4em;
+    color:white;
+ }
+
+ 
+ .hlWrld a{
+   font-size:2.1em;
+   padding:12px;
+   color:white;  
+ }
+
+ .sidenav a {
+   position: absolute;
+   left: -120px;
+   transition: 0.3s;
+   padding: 15px 27px 15px 15px;
+   width: 150px;
+   text-decoration: none;
+   font-size: 1.4em;
+   color: white;
+   border-radius: 0 8px 8px 0;
+ }
+ 
+ .sidenav a:hover {
+   left: 0px;
+ }
+ 
+ #onlineResume {
+   top: 26%;
+   background-color: #050a5a;
+ }
+ 
+ #wordResume {
+   top: 38%;
+   background-color: #091296;
+ }
+ 
+ #research {
+   top: 50%;
+   background-color: #222996;
+ }
+
+ #danceTeam{
+   top: 58.6%;
+   background-color:#3f48c5 ;
+ }
+
+ #allied {
+   top: 71%;
+   background-color: #9299e6;
+ }
+
+ footer {
+   display:flex;
+   flex-direction:column;
+   background-color: black;
+   padding:3%;
+   margin:0px;
+   text-align: center;
+   color: white;
+   font-family:'Lora';
+   border-top:solid white;
+ }
+
+ .footerLinks {
+   border: none;
+   outline: 0;
+   display: inline-block;
+   padding: 8px;
+   text-align: center;
+   font-size: 1.4em;
+   text-decoration:none;
+ }
+ 
+ .footerLinks a {
+   padding:3%;
+   margin:0px;
+   text-decoration: none;
+   font-size: 22px;
+   color:white;
+ }
+.abtMePgPhotos{
+   display:flex;
+   flex-direction:row;
+   padding:0px;
+   margin:0px;
+   background-color: rgb(66, 66, 115);
+}
+
+.abtMePgPhotos img{
+   width:25%;
+   height:auto;
+   background-color:black;
+}
+
+.abtMePgTxt{
+   background-color:rgb(66, 66, 115);
+   color:white;
+   text-align:center;
+   font-family: 'Lora';
+   padding:3%;
+   margin:4%;
+}
+
+
+ .container iframe {
+   width:100%;
+   height:500px;
+   border-radius: 5px;
+   padding: 20px;
+ }
