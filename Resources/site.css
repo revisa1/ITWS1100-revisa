@@ -94,13 +94,14 @@ body{
    background-color: rgba(0, 0, 0, 0.788);
    width:100%;
    z-index:1;
+   padding:2%;
 }
 
 .prjtLabsContent a{
-   float:left;
    color:white;
    text-decoration:none;
-   padding:14px 16px; 
+   padding:2%; 
+   display:inline;
 }
 
 .prjtLabsContent a:hover{
@@ -112,6 +113,7 @@ body{
 
 .prjtLabs:hover .prjtLabsContent{
    display:block;
+   
 }
 
 .justText{
@@ -131,6 +133,12 @@ img {
    box-shadow: 0 4px 8px 0 white;
 }
 
+#hellowrld a{
+      font-size:2.1em;
+      padding:12px;
+      color:white;  
+    }
+   
 
  h1{
     font-size:2.8em;
@@ -143,13 +151,6 @@ img {
     padding: 0 0 3;
     font-size:1.4em;
     color:white;
- }
-
- 
- .hlWrld a{
-   font-size:2.1em;
-   padding:12px;
-   color:white;  
  }
 
  .sidenav a {
@@ -173,7 +174,7 @@ img {
    background-color: #050a5a;
  }
  
- #wordResume {
+ #resumePDF {
    top: 38%;
    background-color: #091296;
  }
