@@ -253,3 +253,30 @@ img {
    border-radius: 5px;
    padding: 20px;
  }
+
+ .lab4 {
+   display:flex;
+   flex-direction: column;
+   align-items: center;
+   padding:12px;
+   color:white;
+ }
+ .lab4 a{
+   font-size:2.1em;
+   color:white;
+} 
+.lab4 a:link{
+    text-decoration:none;
+    color:white;
+ }
+
+.lab4 a:visited{
+    color: white;
+}
+
+.lab4 a:hover{ 
+   color: white;
+   font-style:italic;
+   text-decoration-line:underline;
+ }
+
