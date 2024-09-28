@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>arielleRevisPortfolioRSS</title>
+    <link>http://revisarpi.eastus.cloudapp.azure.com/iit/aboutMe/aboutMe.html</link>
+    <description>The personal Portfolio of Arielle Revis, an ongoing endeavor in Rensselaer's Introduction to ITWS class</description>
+    <item>
+      <title>lab01</title>
+      <link>http://revisarpi.eastus.cloudapp.azure.com/iit/labs/lab01/lab1landing.html</link>
+      <guid isPermaLink="true">http://revisarpi.eastus.cloudapp.azure.com/iit/labs/lab01/lab1landing.html</guid>
+      <description>A collection of screenshots and simple html pages that I made after my 
+      introduction to html, gitHub, VS Code, etc
+      </description>
+      <pubDate>Mon, 09 Sep 2024 11:59:00 EST</pubDate>
+    </item>
+    <item>
+      <title>lab02</title>
+      <link>http://revisarpi.eastus.cloudapp.azure.com/iit/labs/lab02/revisa-ariellerevis-resume.html</link>
+      <guid isPermaLink="true">http://revisarpi.eastus.cloudapp.azure.com/iit/labs/lab02/revisa-ariellerevis-resume.html</guid>
+      <description>In this lab I created an online resume using the html and css skills learned in class.
+      We hadn't learned about external css so the css is created and implemented solely for lab02.
+      </description>
+      <pubDate>Mon, 16 Sep 2024 11:59:00 EST</pubDate>
+    </item>
+    <item>
+      <title>lab03</title>
+      <link>http://revisarpi.eastus.cloudapp.azure.com/iit/labs/lab03/lab3landing.html</link>
+      <guid isPermaLink="true">http://revisarpi.eastus.cloudapp.azure.com/iit/labs/lab03/lab3landing.html</guid>
+      <description>During this lab, I created the entirety of this portfolio. From just a few folders on this repository,
+      I expanded this site to be extensible for the rest of the semester. I used used both html and external css to describe
+      and style my site.
+      </description>
+      <pubDate>Thu, 26 Sep 2024 11:59:00 EST</pubDate>
+    </item>
+    <item>
+      <title>lab04</title>
+      <link>http://revisarpi.eastus.cloudapp.azure.com/iit/labs/lab04/lab4landing.html</link>
+      <guid isPermaLink="true">http://revisarpi.eastus.cloudapp.azure.com/iit/labs/lab04/lab4landing.html</guid>
+      <description>In this lab, we created both RSS and ATOM xml files to contain data about the past labs we have done</description>
+      <pubDate>Mon, 30 Sep 2024 11:59:00 EST</pubDate>
+    </item>
+  </channel>
+</rss>
