@@ -5,7 +5,6 @@
 
 .lora-font {
   font-family: "Lora", serif;
-  font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
@@ -40,7 +39,6 @@ body{
 
 .navbar {
     display:flex;
-    flex:row;
     justify-content:space-evenly;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
@@ -148,7 +146,7 @@ img {
  }
 
  h2{
-    padding: 0 0 3;
+    padding: 0 0 3px;
     font-size:1.4em;
     color:white;
  }
@@ -279,4 +277,64 @@ img {
    font-style:italic;
    text-decoration-line:underline;
  }
+
+ #bodyBlock {
+   width: 700px;
+   margin: auto;
+   color:white;
+}
+#output {
+   margin: 1em 0;
+   color: black;
+   background-color: #fee;
+   padding: 1em;
+   border: 1px solid #ddd;
+}
+
+legend{
+   font-weight:bolder;
+   font-size:larger;
+   padding: 1%;
+   background-color: #9299e6;
+}
+
+fieldset {
+   padding-top: 2em;
+   background-color: #9299e6;
+}
+.field {
+   width: 120px;
+   margin: 0 0.5em 0.5em 0;
+   float: left;
+   clear: left;
+   text-align: right;
+}
+.value {
+   margin: 0 0 0.5em 0;
+}
+#save {
+   float: right;
+}
+
+input:focus {
+   border: 2px solid darkgrey;
+   background-color: #fee;
+}
+
+textarea:focus{
+   border: 2px solid darkgrey;
+   background-color: #fee;
+}
+
+#button {
+   font-family: 'Lora';
+   background-color:#9299e6;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   display: inline-block;
+   font-size: 16px;
+   margin-bottom: 4%;
+ }
+
 
