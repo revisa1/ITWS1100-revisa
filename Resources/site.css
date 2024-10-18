@@ -98,8 +98,9 @@ body{
 .prjtLabsContent a{
    color:white;
    text-decoration:none;
-   padding:2%; 
+   padding:1%;
    display:inline;
+   font-size:auto;
 }
 
 .prjtLabsContent a:hover{
@@ -337,4 +338,68 @@ textarea:focus{
    margin-bottom: 4%;
  }
 
+ #bodyBlock {
+   display:flex;
+   flex-direction:column;
+   justify-content: center;
+   width: 700px;
+   margin: auto;
+ }
+ #showHideBlock {
+   padding: 1em 1em 0 1em;
+   border: 1px solid white;
+   margin:2em;
+ }
+ #showHideBlock p {
+   margin: 0 0 1em 0; 
+ }
+ #showHideLinks {
+   margin-bottom: 1em;
+ }
+ #toggleText {
+   display: block;
+   float: right;
+   color:white;
+ }
 
+#toggleText:hover{
+   font-style:italic;
+   font-weight:light;
+}
+
+
+#hideText{
+   color:white;
+}
+
+#hideText:hover{
+   font-style:italic;
+   font-weight:light;
+}
+
+
+#showText{
+   color:white;
+}
+
+#showText:hover{
+   font-style:italic;
+   font-weight:light;
+}
+
+
+ h1:hover {
+   cursor: pointer; 
+ }
+ .red {
+   color: red;
+   background-color: transparent;
+ }
+ 
+ .lab6tests ul{
+   display:flex;
+   flex-direction:column;
+   justify-content:center;
+   font-size: 1.4em;
+   color:white;
+ }

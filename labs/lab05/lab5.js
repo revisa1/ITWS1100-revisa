@@ -83,6 +83,8 @@ function returnText(){
    
 }
 
+document.getElement
+
 function nickname() {
    firstName=document.getElementById("firstName").value;
    lastName=document.getElementById("lastName").value;
