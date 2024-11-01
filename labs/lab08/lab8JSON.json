@@ -1,0 +1,44 @@
+{
+   "menuItem": [
+      {
+         "lab": "lab01",
+         "title": "Lab 1: Basic Setup",
+         "landing": "lab1landing.html"
+      },
+      {
+         "lab": "lab02",
+         "title": "Lab 2: Resume",
+         "landing": "lab2landing.html"
+      },
+      {
+         "lab": "lab03",
+         "title": "Lab3: Portfolio",
+         "landing": "lab3landing.html"
+      },
+      {
+         "lab": "lab04",
+         "title": "Lab 4: XML",
+         "landing": "lab4landing.html"
+      },
+      {
+         "lab": "lab05",
+         "title": "Lab 5: Javascript",
+         "landing": "lab5landing.html"
+      },
+      {
+         "lab": "lab06",
+         "title": "Lab 6: jQuery",
+         "landing": "lab6landing.html"
+      },
+      {
+         "lab": "lab07",
+         "title": "Lab 7: HCI",
+         "landing": "lab7landing.html"
+      },
+      {
+         "lab": "lab08",
+         "title": "Lab 8: JavaScript, JSON, AJAX",
+         "landing": "lab8landing.html"
+      }
+   ]
+}
