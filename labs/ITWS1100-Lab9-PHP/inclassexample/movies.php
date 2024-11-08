@@ -46,7 +46,7 @@
     $year = htmlspecialchars(trim($_POST["year"]));
     
     //year is okay if the year is greater than 1900(around first time when movies were created)
-    $yearOk = eval("\$year") > 1900;
+    $yearOk = is_numeric($year) && intval($year) > 1900;
 
     $focusId = ''; // trap the first field that needs updating, better would be to save errors in an array
 
@@ -85,7 +85,7 @@
         $insQuery = "insert into movies (`title`,`year`) values(?,?)";
         $statement = $db->prepare($insQuery);
         // bind our variables to the question marks
-        $statement->bind_param("sss",$title,$year);
+        $statement->bind_param("ss",$title,$year);
         // make it so:
         $statement->execute();
 
