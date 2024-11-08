@@ -8,12 +8,6 @@ CREATE TABLE `actors` (
 );
 -- insert data into the tables
 INSERT INTO movies
-VALUES (1, "Elizabeth", "1998"),
-   (2, "Black Widow", "2021"),
-   (3, "Oh Brother Where Art Thou?", "2000"),
-   (
-      4,
-      "The Lord of the Rings: The Fellowship of the Ring",
-      "2001"
-   ),
-   (5, "Up in the Air", "2009");
+VALUES (1, "Jones", "Indiana", "1959-11-19"),
+   (2, "Johanessen", "Scarlet","1950-04-12"),
+   (3, "Pitt", "Brad" "1940-24-06");
