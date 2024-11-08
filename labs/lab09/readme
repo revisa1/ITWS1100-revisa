@@ -1,0 +1,2 @@
+-$yearOk = is_numeric($year) && intval($year) > 1900;
+-brian.
