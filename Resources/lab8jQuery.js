@@ -25,7 +25,7 @@ function getLabspath(){
 	}
 	
 
-	return path+'labs'
+	return path+'iit/labs'
 
 }
 
