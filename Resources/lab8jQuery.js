@@ -61,6 +61,7 @@ $(function() {
       { label: "Lab 6", url: basepath+'/lab06/lab6landing.html' },
       { label: "Lab 7", url: basepath+'/lab07/lab7landing.html' },
       { label: "Lab 8", url: basepath+'/lab08/lab8landing.html' },
+	  { label: "Lab 8", url: basepath+'/lab09/index.php' },
     ];
   
     $("#labs").autocomplete({
