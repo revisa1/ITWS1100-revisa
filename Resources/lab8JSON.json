@@ -43,7 +43,7 @@
       {
          "lab": "lab09",
          "title": "Lab 9: Databases and SQL",
-         "landing": "index.php"
+         "landing": "lab9landing.html"
       }
    ]
 }
