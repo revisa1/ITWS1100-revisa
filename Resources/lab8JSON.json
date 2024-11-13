@@ -39,6 +39,11 @@
          "lab": "lab08",
          "title": "Lab 8: JavaScript, JSON, AJAX",
          "landing": "lab8landing.html"
+      },
+      {
+         "lab": "lab09",
+         "title": "Lab 9: Databases and SQL",
+         "landing": "index.php"
       }
    ]
 }

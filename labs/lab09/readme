@@ -1,2 +1,3 @@
 -$yearOk = is_numeric($year) && intval($year) > 1900;
 -brian.
+relational table: https://www.geeksforgeeks.org/relationships-in-sql-one-to-one-one-to-many-many-to-many/
