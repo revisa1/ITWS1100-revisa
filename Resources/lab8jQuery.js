@@ -12,7 +12,7 @@ function getJSONpath(){
 	}
 	
 
-	return path+'Resources/lab8JSON.json'
+	return path+'iit/Resources/lab8JSON.json'
 
 }
 
