@@ -99,7 +99,7 @@ $(document).ready(function() {
       }
     });
   }
-  if(filename=="actors.php"){
+  else if(filename=="actors.php"){
     
     // focus the name field on first load of the page
     $("#title").focus();
