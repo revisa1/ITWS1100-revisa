@@ -1,0 +1,8 @@
+-$yearOk = is_numeric($year) && intval($year) > 1900; --https://www.geeksforgeeks.org/php-is_numeric-function/
+relational table: https://www.geeksforgeeks.org/relationships-in-sql-one-to-one-one-to-many-many-to-many/
+wanted to add method to the remove function so that if you remove an actor or movie, it also removes it from
+the movie_actors table but I did not have the time or scope to complete this. I thought this could be an interesting
+stepping off point for future labs or personal experiments.
+
+extra credit: added the remove function to work for the movies table
+
