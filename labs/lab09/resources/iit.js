@@ -42,7 +42,7 @@ $(document).ready(function() {
       
       $.ajax({
         type: "post",
-        url: "../actor-delete.php",
+        url: "actor-delete.php",
         dataType: "json",
         data: postData,
         success: function(responseData, status){
