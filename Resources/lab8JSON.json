@@ -44,6 +44,11 @@
          "lab": "lab09",
          "title": "Lab 9: Databases and SQL",
          "landing": "index.php"
+      },
+      {
+         "lab": "lab10",
+         "title": "Lab 10: Promoting Servers",
+         "landing": "lab10landing.html"
       }
    ]
 }
