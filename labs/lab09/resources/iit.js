@@ -38,73 +38,75 @@ $(document).ready(function() {
   
   var pathname = window.location.pathname; // Returns the path and filename
   var filename = pathname.split('/').pop(); // Extracts filename from the path
-  
-  if(filename=='index.php'){
-    
+  //if filename stuff just for focus
+  //just add another click bind event
 
-    // focus the name field on first load of the page
+
+
+  if(filename=='index.php'){
+        // focus the name field on first load of the page
     $("#firstNames").focus();
-      
-    $(".deleteActor").click(function() {
-      if(confirm("Remove actor? (This action cannot be undone.)")) {
+  } 
+  else if(filename=="movies.php"){
+    
+    // focus the name field on first load of the page
+    $("#title").focus();
+  }
+
+  $(".deleteActor").click(function() {//binds click event to .deleteActor class
+    if(confirm("Remove actor? (This action cannot be undone.)")) {
         
         // get the id of the clicked element's row
-        var curId = $(this).closest("tr").attr("id");
+      var curId = $(this).closest("tr").attr("id");
         // Extract the db id of the actor from the dom id of the clicked element
-        var actorId = curId.substr(curId.indexOf("-")+1);
+      var actorId = curId.substr(curId.indexOf("-")+1);
         // Build the data to send. 
-        var postData = "id=" + actorId;
+      var postData = "id=" + actorId;
         // we could also format this as json ... jQuery will (by default) 
         // convert it into a query string anyway, e.g. 
         // var postData = { "id" : actorId };
         
-        $.ajax({
-          type: "post",
-          url: "actor-delete.php",
-          dataType: "json",
-          data: postData,
-          success: function(responseData, status){
-            if (responseData.errors) {
-              alert(responseData.errno + " " + responseData.error);
-            } else {
-              // Uncomment the following line to see the repsonse message from the server
-              // alert(responseData.message);
-              
-              // remove the table row in which the image was clicked
-              $("#" + curId).closest("tr").remove();
-              
-              // if a php generated message box is up, hide it:
-              $(".messages").hide();
-              
-              // populate the js message box and show it:
-              $("#jsMessages").html("<h4>Actor deleted</h4>").show();
-              
-              // re-zebra the table
-              $("#actorTable tr").each(function(i){
-                if (i % 2 == 0) {
-                  // we must compensate for the header row...
-                  $(this).addClass("odd"); 
-                } else {
-                  $(this).removeClass("odd");
-                }
-              });
-            }
-          },
-          error: function(msg) {
-            // there was a problem
-            alert(msg.status + " " + msg.statusText);
+      $.ajax({
+        type: "post",
+        url: "actor-delete.php",
+        dataType: "json",
+        data: postData,
+        success: function(responseData, status){
+          if (responseData.errors) {
+            alert(responseData.errno + " " + responseData.error);
+          } else {
+            // Uncomment the following line to see the repsonse message from the server
+            // alert(responseData.message);
+            
+            // remove the table row in which the image was clicked
+            $("#" + curId).closest("tr").remove();
+            
+            // if a php generated message box is up, hide it:
+            $(".messages").hide();
+            
+            // populate the js message box and show it:
+            $("#jsMessages").html("<h4>Actor deleted</h4>").show();
+            
+            // re-zebra the table
+            $("#actorTable tr").each(function(i){
+              if (i % 2 == 0) {
+                // we must compensate for the header row...
+                $(this).addClass("odd"); 
+              } else {
+                $(this).removeClass("odd");
+              }
+            });
           }
-        });      
+        },
+        error: function(msg) {
+          // there was a problem
+          alert(msg.status + " " + msg.statusText);
+        }
+      });      
         
-      }
-    });
-  }
-  else if(filename=="actors.php"){
-    
-    // focus the name field on first load of the page
-    $("#title").focus();
-      
-    $(".deleteMovie").click(function() {
+    }
+
+  $(".deleteMovie").click(function() {
       if(confirm("Remove movie? (This action cannot be undone.)")) {
         
         // get the id of the clicked element's row
@@ -157,7 +159,16 @@ $(document).ready(function() {
         
       }
     });
-  }
+  
 
   
+  });
+
+
+
+    
 });
+  
+ 
+      
+    
