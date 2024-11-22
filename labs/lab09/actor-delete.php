@@ -33,5 +33,8 @@
       $statement->close();
       $db->close();
     }
+    //add another file for movie-delete??, javascript...
+    //if delete actor or movie delete from relationship table
+    //foreign key methods to do that
   }
 ?>
