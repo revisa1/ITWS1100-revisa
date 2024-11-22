@@ -53,7 +53,7 @@ $(document).ready(function() {
     $("#title").focus();
   }
 
-  $(".deleteActor").click(function() {//binds click event to .deleteActor class
+  $(document).on('click',".deleteActor",function() {//binds click event to .deleteActor class
     if(confirm("Remove actor? (This action cannot be undone.)")) {
         
         // get the id of the clicked element's row
@@ -105,8 +105,9 @@ $(document).ready(function() {
       });      
         
     }
+  });
 
-  $(".deleteMovie").click(function() {
+  $(document).on('click',".deleteMovie",function() {
       if(confirm("Remove movie? (This action cannot be undone.)")) {
         
         // get the id of the clicked element's row
@@ -158,10 +159,7 @@ $(document).ready(function() {
         });      
         
       }
-    });
-  
 
-  
   });
 
 
