@@ -53,7 +53,7 @@ $(document).ready(function() {
     $("#title").focus();
   }
 
-  $(document).on('click',".deleteActor",function() {//binds click event to .deleteActor class
+  $('.deleteActor').click(function() {//binds click event to .deleteActor class
     if(confirm("Remove actor? (This action cannot be undone.)")) {
         
         // get the id of the clicked element's row
@@ -107,7 +107,7 @@ $(document).ready(function() {
     }
   });
 
-  $(document).on('click',".deleteMovie",function() {
+  $('.deleteMovie').click(function() {
       if(confirm("Remove movie? (This action cannot be undone.)")) {
         
         // get the id of the clicked element's row
