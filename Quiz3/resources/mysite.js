@@ -2,7 +2,7 @@ function getToRoot(){
     var pathname=window.location.pathname;
     pathname=pathname.split('/');
     var path=''
-    for(i=0;i<length(pathname);i++){
+    for(var i=1;i<pathname.length;i++){
         path+='../';
     }
     return path;
