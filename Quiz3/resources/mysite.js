@@ -37,6 +37,19 @@ function hideForm(){
 
 $(document).ready(function(){
 
+  var aboutMeLink=document.getElementsByClassName('aboutMeLink');
+  for (var i = 0; i < aboutMeLink.length; i++) {
+    aboutMeLink.href=getToRoot()+'aboutMe/aboutMe.html';
+  }
+  
+  var logoLink=document.getElementById('logoLink');
+  logoLink.href=getToRoot()+'Resources/logo.png';
+
+  var resumeLink=document.getElementById('resumeLink');
+  resumeLink.href=getToRoot()+'Resume/rsmeLanding.html';
+
+  var contactLink=document.getElementById('contactLink');
+  contactLink.href=getToRoot()+'contactInfo/cntct.html';
   var success=$('#successData').data('success');
 
   if (success) {
@@ -64,20 +77,6 @@ $(document).ready(function(){
     $('#labsTable').hide();
   });
 
-  var aboutMeLink=document.getElementsByClassName('aboutMeLink');
-  for (var i = 0; i < aboutMeLink.length; i++) {
-    aboutMeLink.href=getToRoot()+'aboutMe/aboutMe.html';
-  }
-  
-
-  var logoLink=document.getElementById('logoLink');
-  logoLink.href=getToRoot()+'Resources/logo.png';
-
-  var resumeLink=document.getElementById('resumeLink');
-  resumeLink.href=getToRoot()+'Resume/rsmeLanding.html';
-
-  var contactLink=document.getElementById('contactLink');
-  contactLink.href=getToRoot()+'contactInfo/cntct.html';
 
   $("#usernames").focus();
   $('#labnames').focus();
