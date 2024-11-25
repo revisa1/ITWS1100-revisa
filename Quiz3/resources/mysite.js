@@ -65,7 +65,10 @@ $(document).ready(function(){
   });
 
   var aboutMeLink=document.getElementsByClassName('aboutMeLink');
-  aboutMeLink.href=getToRoot()+'aboutMe/aboutMe.html';
+  for (var i = 0; i < aboutMeLink.length; i++) {
+    aboutMeLink.href=getToRoot()+'aboutMe/aboutMe.html';
+  }
+  
 
   var logoLink=document.getElementById('logoLink');
   logoLink.href=getToRoot()+'Resources/logo.png';
