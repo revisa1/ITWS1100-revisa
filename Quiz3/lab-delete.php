@@ -3,7 +3,7 @@
   
   /* Create a new database connection object, passing in the host, username,
      password, and database to use. The "@" suppresses errors. */
-  @$db = new mysqli('localhost', 'root', 'nlg7ejrB_', 'iit');
+  @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
   
   if ($db->connect_error) {
     $connectErrors = array(
@@ -15,13 +15,13 @@
   } else {
     if (isset($_POST["id"])) {
       // get our id and cast as an integer
-      $movieId = (int) $_POST["id"];
+      $actorId = (int) $_POST["id"];
       
       // Setup a prepared statement. 
-      $query = "delete from movies where movieid = ?";
+      $query = "delete from actors where actorid = ?";
       $statement = $db->prepare($query);
       // bind our variable to the question mark
-      $statement->bind_param("i",$movieId);
+      $statement->bind_param("i",$actorId);
       // make it so:
       $statement->execute();
       
@@ -33,6 +33,8 @@
       $statement->close();
       $db->close();
     }
+    //add another file for movie-delete??, javascript...
+    //if delete actor or movie delete from relationship table
+    //foreign key methods to do that
   }
 ?>
-

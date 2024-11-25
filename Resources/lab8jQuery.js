@@ -30,6 +30,8 @@ function getLabspath(){
 }
 
 
+
+
 $.ajax({
 	type: 'GET',
 	url: getJSONpath(),
