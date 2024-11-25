@@ -23,10 +23,7 @@ function getLabspath(){
 	for (var i=0; i<depth; i++){
 		path+=('../');
 	}
-	
-
 	return path+'iit/labs'
-
 }
 
 
