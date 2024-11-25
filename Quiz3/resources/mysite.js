@@ -43,7 +43,7 @@ $(document).ready(function(){
   }
   
   var logoLink=document.getElementById('logoLink');
-  logoLink.href=getToRoot()+'Resources/logo.png';
+  logoLink.src=getToRoot()+'Resources/logo.png';
 
   var resumeLink=document.getElementById('resumeLink');
   resumeLink.href=getToRoot()+'Resume/rsmeLanding.html';
