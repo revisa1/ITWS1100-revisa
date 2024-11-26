@@ -96,8 +96,8 @@
  }
 
 ?>
-    <!--
-      <div id="successData" data-success='<?php /*echo $success; ?>'></div>
+    
+      <div id="successData" data-success='<?php echo $success; ?>'></div>
       <h3 id='loginHeader'>Login Form</h3>
       <form id="loginform" name="loginform" action="index.php" method="post" onsubmit="return checkForm(this);">
         <fieldset>
@@ -122,7 +122,7 @@
             </div>
         </fieldset>
       </form>
-
+<!--
       <button id=logoutButton>Logout</button>
 
       <h3>Add/Delete Labs</h3>
@@ -130,7 +130,7 @@
         <fieldset>
             <div class="formData">
               <label class="field" for="labnames">Lab Name:</label>
-              <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
+              <div class="value"><input type="text" size="60" value="<?php /*if ($havePost && $errors != '') {
                                                                           echo $labname;
                                                                         } ?>" name="labnames" id="labnames" /></div>
                                                                         
@@ -185,5 +185,5 @@
         ?>
       </table>
       */
-      ?> <!--DONT FORGET TO DELETE THIS AFTER TESTING COMMENTS-->
+      ?> DONT FORGET TO DELETE THIS AFTER TESTING COMMENTS-->
       <?php include('Quiz3/includes/footer.php');?>
