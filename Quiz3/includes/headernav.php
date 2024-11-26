@@ -14,7 +14,7 @@
   </head> 
   <body>
     <div class="header">
-      <a class=aboutMeLink><img id='logoLink' src='<?php echo $GLOBALS['iit'] . 'Resources/logo.png'?>' alt="Arielle Revis Logo"></a>
+      <a class=aboutMeLink href='<?php echo $GLOBALS['iit'] . 'aboutMe/aboutMe.html'?>'><img id='logoLink' src='<?php echo $GLOBALS['iit'] . 'Resources/logo.png'?>' alt="Arielle Revis Logo"></a>
       <div class="headerContents">
         <h1><strong>Arielle Revis Portfolio</strong></h1>
         <h2><em>The one-stop shop to all things 'Arielle'</em></h2>
