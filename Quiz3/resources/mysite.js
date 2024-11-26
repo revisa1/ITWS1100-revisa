@@ -52,8 +52,8 @@ function populateLinks(){
   var success=$('#successData').data('success');
 }
 
-$(document).ready(function(){
-
+function whichForm(){
+  
   if (success) {
     $("#loginform").hide();
     $("#logoutButton").show();
@@ -78,6 +78,11 @@ $(document).ready(function(){
     $('#editLabsHeader').hide();
     $('#labsTable').hide();
   });
+
+}
+
+
+$(document).ready(function(){
 
 
   $("#usernames").focus();
