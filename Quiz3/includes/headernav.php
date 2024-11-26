@@ -35,11 +35,11 @@
           <?php
           
             @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
-            $relPath=$GLOBALS['iit'] . 'labs/'
+            $relPath=$GLOBALS['iit'] . 'labs/';
             $query='select * from myLabs';
             $result=$db->query($query);
             $numRecords=$result->num_rows;
-            for($i=0;i<$numRecords;$i++){
+            for(var $i=0;$i<$numRecords;$i++){
               $row=$result->fetch_assoc();
               echo '<a href="'. htmlspecialchars(trim($relPath)) . htmlspecialchars(trim($row['landing'])) . '">' .
               htmlspecialchars(trim($row['title'])) . '</a>';
