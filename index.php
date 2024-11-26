@@ -12,7 +12,7 @@
 </div>
 
 <?php
-/*
+
   $dbOk=false;
   $success=false;
   @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
@@ -24,6 +24,7 @@
   }
   $havePost=isset($_POST['save']);
   $errors='';
+  /*
   if ($havePost) {
     $username = htmlspecialchars(trim($_POST["usernames"]));
     $password = htmlspecialchars(trim($_POST["passwords"]));
