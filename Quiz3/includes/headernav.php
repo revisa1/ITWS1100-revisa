@@ -24,7 +24,7 @@
         <input id="labs">
       </div>
     </div>
-<!--
+
 <div class="navbar">
   <div class="navLinks"><a class=aboutMeLink>About Me</a></div>
   <div class="navLinks"><a id=resumeLink>Resume</a></div>
@@ -33,9 +33,7 @@
     <div class="prjtLabsContent">
       
       <?php
-      /*
-        $currentPath=dirname($_SERVER['PHP_SELF']);
-        $relPath=str_repeat('../',substr_count($currentPath,'/')) . 'labs/'
+        $relPath=$GLOBALS['iit'] . 'labs/'
         $query='select * from myLabs';
         $result=$db->query($query);
         $numRecords=$result->num_rows;
@@ -49,7 +47,9 @@
     </div>
   </div>
   <div class="navLinks">
+    
     <?php
+    /*
       $currentPath=dirname($_SERVER['PHP_SELF']);
       $relPath=str_repeat('../',substr_count($currentPath,'/')) . '../'
       echo '<a href="' . htmlspecialchars(trim($relPath . 'grpDir')) . '">' . 
@@ -60,4 +60,4 @@
   </div>
   <div class="navLinks"><a id=contactLink>Contact Info</a></div>
 </div>
-      -->
+      
