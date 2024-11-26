@@ -14,10 +14,8 @@
 
   <body>
 
-      <?php include('../Quiz3/includes/headernav.php'); 
-      echo $query;
-      ?>
-
+      <?php include('../Quiz3/includes/headernav.php');?>
+    <!--
       <div class="justText">
         <h1>Navigate to the rest of the website; enjoy!</h1>
         <h3>There is no required username or password, just practice with
@@ -25,6 +23,7 @@
       </div>
 
       <?php
+      /*
         $dbOk=false;
         $success=false;
         @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
@@ -193,7 +192,7 @@
             // Finally, let's close the database
             $db->close();
         }
-
+        */
         ?>
       </table>
 
@@ -205,6 +204,8 @@
               <a href="https://www.linkedin.com/in/arielle-revis/">linkedin.com/ariellerevis</a>
           </div>
       </footer>
+      
+      -->
   </body>
 </html>
 
