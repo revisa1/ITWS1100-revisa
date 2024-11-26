@@ -33,6 +33,7 @@
         <div class="prjtLabsContent">
           
           <?php
+          /*
             @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
             $relPath=$GLOBALS['iit'] . 'labs/'
             $query='select * from myLabs';
@@ -44,6 +45,7 @@
               htmlspecialchars(trim($row['title'])) . '</a>';
             }
             $db->close();
+            */
           ?>
 
         </div>
