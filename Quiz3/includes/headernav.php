@@ -53,12 +53,10 @@
       <div class="navLinks">
         
         <?php
-        /*
-          $currentPath=dirname($_SERVER['PHP_SELF']);
-          $relPath=str_repeat('../',substr_count($currentPath,'/')) . '../'
+          $relPath= $GLOBALS['iit'] . '../'
           echo '<a href="' . htmlspecialchars(trim($relPath . 'grpDir')) . '">' . 
-            htmlspecialchars(trim($row['title'])) . '</a';    
-            */     
+            htmlspecialchars(trim($row['title'])) . '</a>';    
+              
         ?>
 
       </div>
