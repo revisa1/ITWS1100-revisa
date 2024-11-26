@@ -7,9 +7,10 @@
     
 <div class="justText">
   <h1>Navigate to the rest of the website; enjoy!</h1>
-   <h3>There is no required username or password, just practice with
+  <h3>There is no required username or password, just practice with
       dynamically loading php information and databases!</h3>
 </div>
+
 <?php
 /*
   $dbOk=false;
@@ -93,9 +94,9 @@
     }
  }
 
-*/?>
-     <!-- 
-      <div id="successData" data-success='<?/*php echo $success; ?>'></div>
+?>
+    
+      <div id="successData" data-success='<?php echo $success; ?>'></div>
       <h3 id='loginHeader'>Login Form</h3>
       <form id="loginform" name="loginform" action="index.php" method="post" onsubmit="return checkForm(this);">
         <fieldset>
@@ -143,6 +144,7 @@
       </form>
 
       <h3 id='editLabsHeader'>Labs Add/Remove</h3>
+      
       <table id="labsTable">
         <?php
         if ($dbOk) {
@@ -178,8 +180,9 @@
             $db->close();
         }
         
-        */?>
+        
+        ?>
       </table>
-      -->
+      */
+      ?> <!--DONT FORGET TO DELETE THIS AFTER TESTING COMMENTS-->
       <?php include('Quiz3/includes/footer.php');?>
-
