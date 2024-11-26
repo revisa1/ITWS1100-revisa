@@ -25,41 +25,41 @@
       </div>
     </div>
 
-<div class="navbar">
-  <div class="navLinks"><a class=aboutMeLink>About Me</a></div>
-  <div class="navLinks"><a id=resumeLink>Resume</a></div>
-  <div class="prjtLabs">
-    <button class="prjtLabsBtn">Projects & Labs</button>
-    <div class="prjtLabsContent">
-      
-      <?php
-        @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
-        $relPath=$GLOBALS['iit'] . 'labs/'
-        $query='select * from myLabs';
-        $result=$db->query($query);
-        $numRecords=$result->num_rows;
-        for($i=0;i<$numRecords;$i++){
-          $row=$result->fetch_assoc();
-          echo '<a href="'. htmlspecialchars(trim($relPath)) . htmlspecialchars(trim($row['landing'])) . '">' .
-          htmlspecialchars(trim($row['title'])) . '</a>';
-        }
-        $db->close();
-      ?>
+    <div class="navbar">
+      <div class="navLinks"><a class=aboutMeLink>About Me</a></div>
+      <div class="navLinks"><a id=resumeLink>Resume</a></div>
+      <div class="prjtLabs">
+        <button class="prjtLabsBtn">Projects & Labs</button>
+        <div class="prjtLabsContent">
+          
+          <?php
+            @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
+            $relPath=$GLOBALS['iit'] . 'labs/'
+            $query='select * from myLabs';
+            $result=$db->query($query);
+            $numRecords=$result->num_rows;
+            for($i=0;i<$numRecords;$i++){
+              $row=$result->fetch_assoc();
+              echo '<a href="'. htmlspecialchars(trim($relPath)) . htmlspecialchars(trim($row['landing'])) . '">' .
+              htmlspecialchars(trim($row['title'])) . '</a>';
+            }
+            $db->close();
+          ?>
 
+        </div>
+      </div>
+      <div class="navLinks">
+        
+        <?php
+        /*
+          $currentPath=dirname($_SERVER['PHP_SELF']);
+          $relPath=str_repeat('../',substr_count($currentPath,'/')) . '../'
+          echo '<a href="' . htmlspecialchars(trim($relPath . 'grpDir')) . '">' . 
+            htmlspecialchars(trim($row['title'])) . '</a';    
+            */     
+        ?>
+
+      </div>
+      <div class="navLinks"><a id=contactLink>Contact Info</a></div>
     </div>
-  </div>
-  <div class="navLinks">
-    
-    <?php
-    /*
-      $currentPath=dirname($_SERVER['PHP_SELF']);
-      $relPath=str_repeat('../',substr_count($currentPath,'/')) . '../'
-      echo '<a href="' . htmlspecialchars(trim($relPath . 'grpDir')) . '">' . 
-        htmlspecialchars(trim($row['title'])) . '</a';    
-        */     
-    ?>
-
-  </div>
-  <div class="navLinks"><a id=contactLink>Contact Info</a></div>
-</div>
       
