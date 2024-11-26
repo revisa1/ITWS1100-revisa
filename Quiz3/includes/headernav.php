@@ -53,7 +53,7 @@
       <div class="navLinks">
         
         <?php
-          $relPath= $GLOBALS['iit'] . '../'
+          $relPath= $GLOBALS['iit'] . '../';
           echo '<a href="' . $relPath . 'grpDir' . '">Group Directory </a>';    
               
         ?>
