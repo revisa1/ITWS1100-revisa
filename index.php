@@ -14,7 +14,10 @@
 
   <body>
 
-      <?php include('../Quiz3/includes/headernav.php'); ?>
+      <?php include('../Quiz3/includes/headernav.php'); 
+      echo $query;
+      ?>
+
       <div class="justText">
         <h1>Navigate to the rest of the website; enjoy!</h1>
         <h3>There is no required username or password, just practice with
