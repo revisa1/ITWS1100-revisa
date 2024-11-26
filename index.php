@@ -1,6 +1,21 @@
-      <?php include('../Quiz3/includes/headernav.php');
-      include('../Quiz3/includes.footer.php')
-      ?>
+<?php include('../Quiz3/includes/headernav.php');?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>root index</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script type='text/javascript' src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="Quiz3/resources/mysite.js"></script>
+    <script type="text/javascript" src="Resources/lab8jQuery.js"></script> 
+    <link rel="stylesheet" href="Resources/site.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');</style>
+  </head> 
+
+  <body>
+
+
     <!--
       <div class="justText">
         <h1>Navigate to the rest of the website; enjoy!</h1>
@@ -192,5 +207,6 @@
       </footer>
       
       -->
-      
+  </body>
+</html>
 
