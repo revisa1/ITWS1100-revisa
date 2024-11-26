@@ -65,7 +65,7 @@ function whichForm(){
 
 
 $(document).ready(function(){
-  var submitted="<?php echo $success; ?>";
+  var submitted="<?php echo (boolval($success) ? 'true' : 'false') ?>";
   if (submitted) {
     $("#loginform").hide();
     $("#logoutButton").show();
