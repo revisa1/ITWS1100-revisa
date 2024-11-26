@@ -41,7 +41,7 @@
             $numRecords=$result->num_rows;
             for($i=0;$i<$numRecords;$i++){
               $row=$result->fetch_assoc();
-              echo '<a href="'. $relPath . htmlspecialchars(trim($row['landing'])) . '">' .
+              echo '<a href="'. $relPath . 'lab' .  htmlspecialchars(trim($row['labid'])). '/' . htmlspecialchars(trim($row['landing'])) . '">' .
               htmlspecialchars(trim($row['title'])) . '</a>';
             }
             $db->close();
