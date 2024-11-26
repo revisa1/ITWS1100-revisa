@@ -39,7 +39,7 @@
             $query='select * from myLabs';
             $result=$db->query($query);
             $numRecords=$result->num_rows;
-            for(var $i=0;$i<$numRecords;$i++){
+            for($i=0;$i<$numRecords;$i++){
               $row=$result->fetch_assoc();
               echo '<a href="'. htmlspecialchars(trim($relPath)) . htmlspecialchars(trim($row['landing'])) . '">' .
               htmlspecialchars(trim($row['title'])) . '</a>';
