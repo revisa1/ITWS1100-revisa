@@ -20,6 +20,7 @@
         <h2><em>The one-stop shop to all things 'Arielle'</em></h2>
       </div>
       <div class="ui-widget">
+        <label for="labsearch">Lab Search: </label>
         <input id="labs">
       </div>
       </div>
