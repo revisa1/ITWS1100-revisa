@@ -65,7 +65,7 @@ function whichForm(){
 
 
 $(document).ready(function(){
-  var submitted=$('#loginform').data('success');
+  var submitted=$("[data-submitted]");
   if (submitted) {
     $("#loginform").hide();
     $("#logoutButton").show();
