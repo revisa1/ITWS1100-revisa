@@ -1,4 +1,6 @@
-      <?php include('../Quiz3/includes/headernav.php');?>
+      <?php include('../Quiz3/includes/headernav.php');
+      include('../Quiz3/includes.footer.php')
+      ?>
     <!--
       <div class="justText">
         <h1>Navigate to the rest of the website; enjoy!</h1>
@@ -190,6 +192,5 @@
       </footer>
       
       -->
-  </body>
-</html>
+      
 
