@@ -6,99 +6,94 @@
   ?>
 
     
-      <div class="justText">
-        <h1>Navigate to the rest of the website; enjoy!</h1>
-        <h3>There is no required username or password, just practice with
-           dynamically loading php information and databases!</h3>
-      </div>
-
-      <?php
-      
-        $dbOk=false;
-        $success=false;
-        @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
-        if ($db->connect_error){
-          echo '<div class="messages">Could not connect to the database. Error: ';
-          echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
-        } else {
-          $dbOk = true;
-        }
-        $havePost=isset($_POST['save']);
-        $errors='';
-        if ($havePost) {
-          $username = htmlspecialchars(trim($_POST["usernames"]));
-          $password = htmlspecialchars(trim($_POST["passwords"]));
-          $userType = htmlspecialchars(trim($_POST["userTypes"]));
-          $labname = htmlspecialchars(trim($_POST['labnames']));
-          $lablanding = htmlspecialchars(trim($_POST['lablandings']));
-              
-          $focusId = ''; 
+<div class="justText">
+  <h1>Navigate to the rest of the website; enjoy!</h1>
+   <h3>There is no required username or password, just practice with
+      dynamically loading php information and databases!</h3>
+</div>
+<?php
+  $dbOk=false;
+  $success=false;
+  @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
+  if ($db->connect_error){
+    echo '<div class="messages">Could not connect to the database. Error: ';
+    echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
+  } else {
+    $dbOk = true;
+  }
+  $havePost=isset($_POST['save']);
+  $errors='';
+  if ($havePost) {
+    $username = htmlspecialchars(trim($_POST["usernames"]));
+    $password = htmlspecialchars(trim($_POST["passwords"]));
+    $userType = htmlspecialchars(trim($_POST["userTypes"]));
+    $labname = htmlspecialchars(trim($_POST['labnames']));
+    $lablanding = htmlspecialchars(trim($_POST['lablandings']));
+          
+    $focusId = ''; 
+     
+    if ($username == '') {
+      $errors .= '<li>Username may not be blank</li>';
+      if ($focusId == '') $focusId = '#usernames';
+    }
+    if ($password == '') {
+      $errors .= '<li>Password may not be blank</li>';
+      if ($focusId == '') $focusId = '#passwords';
+    }
+    if ($userType == '') {
+      $errors .= '<li>User Type may not be blank</li>';
+      if ($focusId == '') $focusId = '#userTypes';
+    }
+    if ($labname == '') {
+      $errors .= '<li>Lab Number may not be blank</li>';
+      if ($focusId == '') $focusId = '#labnames';
+    }
+    if ($lablanding == '') {
+    $errors .= '<li>Lab Landing may not be blank</li>';
+    if ($focusId == '') $focusId = '#lablandings';
+    }
+    
+    if ($errors != '') {
+      echo '<div class="messages"><h4>Please correct the following errors:</h4><ul>';
+      echo $errors;
+      echo '</ul></div>';
+      echo '<script type="text/javascript">';
+      echo '  $(document).ready(function() {';
+      echo '    $("' . $focusId . '").focus();';
+      echo '  });';
+      echo '</script>';
+    } else {
+      if ($dbOk) {
+        $usernameForDb = trim($_POST["usernames"]);
+        $passwordForDb = trim($_POST["passwords"]);
+        $userTypeForDb = trim($_POST["userTypes"]);
+        $labnameForDb = trim($_POST['labnames']);
+        $lablandingForDb = trim($_POST['lablandings']);
        
-          if ($username == '') {
-             $errors .= '<li>Username may not be blank</li>';
-             if ($focusId == '') $focusId = '#usernames';
-          }
-          if ($password == '') {
-             $errors .= '<li>Password may not be blank</li>';
-             if ($focusId == '') $focusId = '#passwords';
-          }
-          if ($userType == '') {
-             $errors .= '<li>User Type may not be blank</li>';
-             if ($focusId == '') $focusId = '#userTypes';
-          }
-          if ($labname == '') {
-            $errors .= '<li>Lab Number may not be blank</li>';
-            if ($focusId == '') $focusId = '#labnames';
-         }
-         if ($lablanding == '') {
-          $errors .= '<li>Lab Landing may not be blank</li>';
-          if ($focusId == '') $focusId = '#lablandings';
-       }
-      
-          if ($errors != '') {
-             echo '<div class="messages"><h4>Please correct the following errors:</h4><ul>';
-             echo $errors;
-             echo '</ul></div>';
-             echo '<script type="text/javascript">';
-             echo '  $(document).ready(function() {';
-             echo '    $("' . $focusId . '").focus();';
-             echo '  });';
-             echo '</script>';
-          } else {
-             if ($dbOk) {
-                $usernameForDb = trim($_POST["usernames"]);
-                $passwordForDb = trim($_POST["passwords"]);
-                $userTypeForDb = trim($_POST["userTypes"]);
-                $labnameForDb = trim($_POST['labnames']);
-                $lablandingForDb = trim($_POST['lablandings']);
-       
-                $insQuery = "insert into mySiteUsers (`username`,`pw`,`userType`) values(?,?,?)";//actors=table name, last_names,etc.. field names
-                $statement = $db->prepare($insQuery);
-                $statement->bind_param("sss", $usernameForDb, $passwordForDb, $userTypeForDb);
-                $statement->execute();
+        $insQuery = "insert into mySiteUsers (`username`,`pw`,`userType`) values(?,?,?)";//actors=table name, last_names,etc.. field names
+        $statement = $db->prepare($insQuery);
+        $statement->bind_param("sss", $usernameForDb, $passwordForDb, $userTypeForDb);
+        $statement->execute();
 
-                echo '<div class="messages"><h4>Welcome ' . $username . '!</h4>';
+        echo '<div class="messages"><h4>Welcome ' . $username . '!</h4>';
 
-                $success=true;
+        $success=true;
 
-                $statement->close();
+        $statement->close();
 
-                $insLabQuery='insert into myLabs(`title`,`landing`) values(?,?)';
-                $labStatement=$db->prepare($insLabQuery);
-                $labStatement->bind_param('ss',$labnameForDb,$lablandingForDb);
-                $labStatment->execute();              
+        $insLabQuery='insert into myLabs(`title`,`landing`) values(?,?)';
+        $labStatement=$db->prepare($insLabQuery);
+        $labStatement->bind_param('ss',$labnameForDb,$lablandingForDb);
+        $labStatment->execute();              
 
-                echo '<div class="messages"><h4>Added ' . $labname . 'to Labs!</h4>';
+        echo '<div class="messages"><h4>Added ' . $labname . 'to Labs!</h4>';
 
-                $labStatement->close();
-             }
-          }
-        }
+        $labStatement->close();
+      }
+    }
+ }
 
-
-
-
-      ?>
+?>
      <!-- 
       <div id="successData" data-success='<?/*php echo $success; ?>'></div>
       <h3 id='loginHeader'>Login Form</h3>
