@@ -49,7 +49,7 @@ function populateLinks(){
 
   var contactLink=document.getElementById('contactLink');
   contactLink.href=getToRoot()+'contactInfo/cntct.html';
-  var success=$('#successData').data('success');
+
 }
 
 function whichForm(){
@@ -83,7 +83,7 @@ function whichForm(){
 
 
 $(document).ready(function(){
-
+  var success=$('#successData').data('success');
   if (success) {
     $("#loginform").hide();
     $("#logoutButton").show();
@@ -108,7 +108,7 @@ $(document).ready(function(){
     $('#editLabsHeader').hide();
     $('#labsTable').hide();
   });
-  
+
   $("#usernames").focus();
   $('#labnames').focus();
 
