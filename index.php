@@ -1,6 +1,6 @@
 
   <?php 
-  include('Quiz3/includes/conn.php')
+  include('Quiz3/includes/conn.php');
   include('Quiz3/includes/headernav.php');
   include('Quiz3/includes/footer.php');
   ?>
