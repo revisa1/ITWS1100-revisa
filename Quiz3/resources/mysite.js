@@ -32,24 +32,6 @@ function checkForm(formObj) {
 function hideForm(){
   var loginform=getElementById('loginform')
   loginform.style.display('none')
-
-}
-
-function populateLinks(){
-  var aboutMeLink=document.getElementsByClassName('aboutMeLink');
-  for (var i = 0; i < aboutMeLink.length; i++) {
-    aboutMeLink.href=getToRoot()+'aboutMe/aboutMe.html';
-  }
-  
-  var logoLink=document.getElementById('logoLink');
-  logoLink.src=getToRoot()+'Resources/logo.png';
-
-  var resumeLink=document.getElementById('resumeLink');
-  resumeLink.href=getToRoot()+'Resume/rsmeLanding.html';
-
-  var contactLink=document.getElementById('contactLink');
-  contactLink.href=getToRoot()+'contactInfo/cntct.html';
-
 }
 
 function whichForm(){
@@ -83,8 +65,8 @@ function whichForm(){
 
 
 $(document).ready(function(){
-  var success=$('#successData').data('success');
-  if (success) {
+  var submitted=$('#loginform').data('success');
+  if (submitted) {
     $("#loginform").hide();
     $("#logoutButton").show();
     $('#loginHeader').hide();

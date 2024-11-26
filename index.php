@@ -97,9 +97,9 @@
 
 ?>
     
-      <div id="successData" data-success='<?php echo $success; ?>'></div>
+      <!--<div id="successData" data-success='<?php/* echo $success; */?>'></div>-->
       <h3 id='loginHeader'>Login Form</h3>
-      <form id="loginform" name="loginform" action="index.php" method="post" onsubmit="return checkForm(this);">
+      <form id="loginform" name="loginform" action="index.php" method="post" data-submitted='<?php echo $success; ?>' onsubmit="return checkForm(this);">
         <fieldset>
             <div class="formData">
 
