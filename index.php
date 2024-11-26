@@ -13,6 +13,16 @@
   </head> 
 
   <body>
+      <div class="header">
+      <a class=aboutMeLink><img id='logoLink' alt="Arielle Revis Logo"></a>
+      <div class="headerContents">
+        <h1><strong>Arielle Revis Portfolio</strong></h1>
+        <h2><em>The one-stop shop to all things 'Arielle'</em></h2>
+      </div>
+      <div class="ui-widget">
+        <input id="labs">
+      </div>
+      </div>
       <?php include('../Quiz3/includes/headernav.php'); ?>
       <div class="justText">
         <h1>Navigate to the rest of the website; enjoy!</h1>

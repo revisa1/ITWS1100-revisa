@@ -35,6 +35,8 @@ function hideForm(){
 
 }
 
+
+
 $(document).ready(function(){
 
   var aboutMeLink=document.getElementsByClassName('aboutMeLink');
