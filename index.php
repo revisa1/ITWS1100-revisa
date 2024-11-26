@@ -24,7 +24,7 @@
   }
   $havePost=isset($_POST['save']);
   $errors='';
-  /*
+  
   if ($havePost) {
     $username = htmlspecialchars(trim($_POST["usernames"]));
     $password = htmlspecialchars(trim($_POST["passwords"]));
@@ -96,8 +96,8 @@
  }
 
 ?>
-    
-      <div id="successData" data-success='<?php echo $success; ?>'></div>
+    <!--
+      <div id="successData" data-success='<?php /*echo $success; ?>'></div>
       <h3 id='loginHeader'>Login Form</h3>
       <form id="loginform" name="loginform" action="index.php" method="post" onsubmit="return checkForm(this);">
         <fieldset>
