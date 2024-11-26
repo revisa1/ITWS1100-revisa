@@ -1,4 +1,4 @@
-<?php include('Quiz3/includes/headernav.php');?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,7 +14,7 @@
   </head> 
 
   <body>
-
+  <?php include('Quiz3/includes/headernav.php');?>
 
     <!--
       <div class="justText">
