@@ -13,7 +13,11 @@
   </head> 
 
   <body>
-      <?php include('../Quiz3/includes/headernav.php'); ?>
+      <?php         
+        $dbOk=false;
+        $success=false;
+        include('../Quiz3/includes/headernav.php');
+     ?>
       <div class="justText">
         <h1>Navigate to the rest of the website; enjoy!</h1>
         <h3>There is no required username or password, just practice with
@@ -21,8 +25,7 @@
       </div>
 
       <?php
-        $dbOk=false;
-        $success=false;
+
         @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
         if ($db->connect_error){
           echo '<div class="messages">Could not connect to the database. Error: ';
