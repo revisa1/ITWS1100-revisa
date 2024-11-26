@@ -28,7 +28,7 @@ function getLabspath(){
 
 
 
-
+/*
 $.ajax({
 	type: 'GET',
 	url: getJSONpath(),
@@ -44,6 +44,7 @@ $.ajax({
 	  alert('There was a problem: ' + msg.status + ' ' + msg.statusText);
 	}
 });	
+*/
 
 //jQuery UI function for autocomplete
 $(function() {
