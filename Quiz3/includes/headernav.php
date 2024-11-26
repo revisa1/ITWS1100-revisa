@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header" onload='populateLinks()'>
   <a class='aboutMeLink' ><img id='logoLink' alt="Arielle Revis Logo" ></a>
   <div class="headerContents">
     <h1><strong>Arielle Revis Portfolio</strong></h1>
@@ -9,7 +9,7 @@
     <input id="labs">
   </div>
 </div>
-<div class="navbar">
+<div class="navbar" >
   <div class="navLinks"><a class=aboutMeLink>About Me</a></div>
   <div class="navLinks"><a id=resumeLink>Resume</a></div>
   <div class="prjtLabs">
