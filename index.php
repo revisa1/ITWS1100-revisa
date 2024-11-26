@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <style>@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');</style>
   </head> 
-  <?php         $success=false; ?>
-  <body onload='whichForm()'>
+
+  <body>
 
       <?php include('../Quiz3/includes/headernav.php'); ?>
       <div class="justText">
