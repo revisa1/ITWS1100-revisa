@@ -12,6 +12,7 @@
       dynamically loading php information and databases!</h3>
 </div>
 <?php
+/*
   $dbOk=false;
   $success=false;
   @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
@@ -93,7 +94,7 @@
     }
  }
 
-?>
+*/?>
      <!-- 
       <div id="successData" data-success='<?/*php echo $success; ?>'></div>
       <h3 id='loginHeader'>Login Form</h3>
