@@ -54,8 +54,7 @@
         
         <?php
           $relPath= $GLOBALS['iit'] . '../'
-          echo '<a href="' . $relPath . 'grpDir' . '">' . 
-            'Group Directory' . '</a>';    
+          echo '<a href="' . $relPath . 'grpDir' . '">Group Directory </a>';    
               
         ?>
 
