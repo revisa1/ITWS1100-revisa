@@ -5,7 +5,7 @@
   include('Quiz3/includes/footer.php');
   ?>
 
-    <!--
+    
       <div class="justText">
         <h1>Navigate to the rest of the website; enjoy!</h1>
         <h3>There is no required username or password, just practice with
@@ -13,7 +13,7 @@
       </div>
 
       <?php
-      /*
+      
         $dbOk=false;
         $success=false;
         @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
@@ -185,17 +185,5 @@
         */
         ?>
       </table>
-
-      <footer>
-          <h1><strong>Thank You For Visiting!</strong></h1>
-          <div class="footerLinks">
-              <a href="mailto:arielle.a.revis@gmail.com">arielle.a.revis@gmail.com</a>
-              <a href="tel:8482379843">(848) - 237 9843</a>
-              <a href="https://www.linkedin.com/in/arielle-revis/">linkedin.com/ariellerevis</a>
-          </div>
-      </footer>
-      
-      -->
-  </body>
-</html>
+      <?php include('Quiz3/includes/footer.php');?>
 
