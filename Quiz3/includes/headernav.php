@@ -1,5 +1,5 @@
 <div class="header">
-  <a class=aboutMeLink><img id='logoLink' alt="Arielle Revis Logo"></a>
+  <a class=aboutMeLink onload='populateLinks()'><img id='logoLink' alt="Arielle Revis Logo" onload='populateLinks()'></a>
   <div class="headerContents">
     <h1><strong>Arielle Revis Portfolio</strong></h1>
     <h2><em>The one-stop shop to all things 'Arielle'</em></h2>
@@ -9,7 +9,6 @@
     <input id="labs">
   </div>
 </div>
-<!--
 <div class="navbar">
   <div class="navLinks"><a class=aboutMeLink>About Me</a></div>
   <div class="navLinks"><a id=resumeLink>Resume</a></div>
@@ -43,4 +42,3 @@
   </div>
   <div class="navLinks"><a id=contactLink>Contact Info</a></div>
 </div>
-      -->

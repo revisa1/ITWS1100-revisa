@@ -35,10 +35,7 @@ function hideForm(){
 
 }
 
-
-
-$(document).ready(function(){
-
+function populateLinks(){
   var aboutMeLink=document.getElementsByClassName('aboutMeLink');
   for (var i = 0; i < aboutMeLink.length; i++) {
     aboutMeLink.href=getToRoot()+'aboutMe/aboutMe.html';
@@ -53,6 +50,9 @@ $(document).ready(function(){
   var contactLink=document.getElementById('contactLink');
   contactLink.href=getToRoot()+'contactInfo/cntct.html';
   var success=$('#successData').data('success');
+}
+
+$(document).ready(function(){
 
   if (success) {
     $("#loginform").hide();
