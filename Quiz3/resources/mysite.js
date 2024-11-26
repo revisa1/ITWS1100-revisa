@@ -84,7 +84,31 @@ function whichForm(){
 
 $(document).ready(function(){
 
+  if (success) {
+    $("#loginform").hide();
+    $("#logoutButton").show();
+    $('#loginHeader').hide();
+    $('#editLabsHeader').show();
+    $('#labsTable').show();
 
+  } else {
+    $("#loginform").show();
+    $("#logoutButton").hide();
+    $('#loginHeader').show();
+    $('#editLabsHeader').hide();
+    $('#labsTable').hide();
+  }
+
+  $("#logoutButton").click(function () {
+    $("#loginform").show();
+    $("#logoutButton").hide();
+    $("#loginform")[0].reset();
+
+    $('#loginHeader').show();
+    $('#editLabsHeader').hide();
+    $('#labsTable').hide();
+  });
+  
   $("#usernames").focus();
   $('#labnames').focus();
 

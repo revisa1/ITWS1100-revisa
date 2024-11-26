@@ -1,5 +1,5 @@
 <div class="header">
-  <a class=aboutMeLink onload='populateLinks()'><img id='logoLink' alt="Arielle Revis Logo" onload='populateLinks()'></a>
+  <a class=aboutMeLink ><img id='logoLink' alt="Arielle Revis Logo" ></a>
   <div class="headerContents">
     <h1><strong>Arielle Revis Portfolio</strong></h1>
     <h2><em>The one-stop shop to all things 'Arielle'</em></h2>
