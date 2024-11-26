@@ -99,8 +99,8 @@
 
 
       ?>
-      
-      <div id="successData" data-success='<?php echo $success; ?>'></div>
+     <!-- 
+      <div id="successData" data-success='<?/*php echo $success; ?>'></div>
       <h3 id='loginHeader'>Login Form</h3>
       <form id="loginform" name="loginform" action="index.php" method="post" onsubmit="return checkForm(this);">
         <fieldset>
@@ -182,8 +182,9 @@
             // Finally, let's close the database
             $db->close();
         }
-        */
-        ?>
+        
+        */?>
       </table>
+      -->
       <?php include('Quiz3/includes/footer.php');?>
 
