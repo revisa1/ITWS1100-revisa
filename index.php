@@ -12,13 +12,12 @@
 </div>
 
 <?php
-  echo '000';
 
   $dbOk=false;
   //$success=false;
   @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
   //@$db = new mysqli('localhost', 'root', 'nlg7ejrB_', 'mySite');
-  echo '1234567';
+
   if ($db->connect_error){
     echo '<div class="messages">Could not connect to the database. Error: ';
     echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
@@ -27,80 +26,80 @@
   }
   $havePost=isset($_POST['save']);
   $errors='';
-  echo 'abc';
+
   
-  /*
-//   if ($havePost) {
-//     $username = htmlspecialchars(trim($_POST["usernames"]));
-//     $password = htmlspecialchars(trim($_POST["passwords"]));
-//     $userType = htmlspecialchars(trim($_POST["userTypes"]));
-//     $labname = htmlspecialchars(trim($_POST['labnames']));
-//     $lablanding = htmlspecialchars(trim($_POST['lablandings']));
+  
+  if ($havePost) {
+    $username = htmlspecialchars(trim($_POST["usernames"]));
+    $password = htmlspecialchars(trim($_POST["passwords"]));
+    $userType = htmlspecialchars(trim($_POST["userTypes"]));
+    $labname = htmlspecialchars(trim($_POST['labnames']));
+    $lablanding = htmlspecialchars(trim($_POST['lablandings']));
           
-//     $focusId = ''; 
+    $focusId = ''; 
      
-//     if ($username == '') {
-//       $errors .= '<li>Username may not be blank</li>';
-//       if ($focusId == '') $focusId = '#usernames';
-//     }
-//     if ($password == '') {
-//       $errors .= '<li>Password may not be blank</li>';
-//       if ($focusId == '') $focusId = '#passwords';
-//     }
-//     if ($userType == '') {
-//       $errors .= '<li>User Type may not be blank</li>';
-//       if ($focusId == '') $focusId = '#userTypes';
-//     }
-//     if ($labname == '') {
-//       $errors .= '<li>Lab Number may not be blank</li>';
-//       if ($focusId == '') $focusId = '#labnames';
-//     }
-//     if ($lablanding == '') {
-//     $errors .= '<li>Lab Landing may not be blank</li>';
-//     if ($focusId == '') $focusId = '#lablandings';
-//     }
-    
-//     if ($errors != '') {
-//       echo '<div class="messages"><h4>Please correct the following errors:</h4><ul>';
-//       echo $errors;
-//       echo '</ul></div>';
-//       echo '<script type="text/javascript">';
-//       echo '  $(document).ready(function() {';
-//       echo '    $("' . $focusId . '").focus();';
-//       echo '  });';
-//       echo '</script>';
-//     } else {
-//       if ($dbOk) {
-//         $usernameForDb = trim($_POST["usernames"]);
-//         $passwordForDb = trim($_POST["passwords"]);
-//         $userTypeForDb = trim($_POST["userTypes"]);
-//         $labnameForDb = trim($_POST['labnames']);
-//         $lablandingForDb = trim($_POST['lablandings']);
+    if ($username == '') {
+      $errors .= '<li>Username may not be blank</li>';
+      if ($focusId == '') $focusId = '#usernames';
+    }
+    if ($password == '') {
+      $errors .= '<li>Password may not be blank</li>';
+      if ($focusId == '') $focusId = '#passwords';
+    }
+    if ($userType == '') {
+      $errors .= '<li>User Type may not be blank</li>';
+      if ($focusId == '') $focusId = '#userTypes';
+    }
+    if ($labname == '') {
+      $errors .= '<li>Lab Number may not be blank</li>';
+      if ($focusId == '') $focusId = '#labnames';
+    }
+    if ($lablanding == '') {
+    $errors .= '<li>Lab Landing may not be blank</li>';
+    if ($focusId == '') $focusId = '#lablandings';
+    }
+    echo 'xxx';
+    // if ($errors != '') {
+    //   echo '<div class="messages"><h4>Please correct the following errors:</h4><ul>';
+    //   echo $errors;
+    //   echo '</ul></div>';
+    //   echo '<script type="text/javascript">';
+    //   echo '  $(document).ready(function() {';
+    //   echo '    $("' . $focusId . '").focus();';
+    //   echo '  });';
+    //   echo '</script>';
+    // } else {
+    //   if ($dbOk) {
+    //     $usernameForDb = trim($_POST["usernames"]);
+    //     $passwordForDb = trim($_POST["passwords"]);
+    //     $userTypeForDb = trim($_POST["userTypes"]);
+    //     $labnameForDb = trim($_POST['labnames']);
+    //     $lablandingForDb = trim($_POST['lablandings']);
        
-//         $insQuery = "insert into mySiteUsers (`username`,`pw`,`userType`) values(?,?,?)";//actors=table name, last_names,etc.. field names
-//         $statement = $db->prepare($insQuery);
-//         $statement->bind_param("sss", $usernameForDb, $passwordForDb, $userTypeForDb);
-//         $statement->execute();
+    //     $insQuery = "insert into mySiteUsers (`username`,`pw`,`userType`) values(?,?,?)";//actors=table name, last_names,etc.. field names
+    //     $statement = $db->prepare($insQuery);
+    //     $statement->bind_param("sss", $usernameForDb, $passwordForDb, $userTypeForDb);
+    //     $statement->execute();
 
-//         echo '<div class="messages"><h4>Welcome ' . $username . '!</h4>';
+    //     echo '<div class="messages"><h4>Welcome ' . $username . '!</h4>';
 
-//         //$success=true;
+    //     //$success=true;
 
-//         $statement->close();
+    //     $statement->close();
 
-//         $insLabQuery='insert into myLabs(`title`,`landing`) values(?,?)';
-//         $labStatement=$db->prepare($insLabQuery);
-//         $labStatement->bind_param('ss',$labnameForDb,$lablandingForDb);
-//         $labStatement->execute();              
+    //     $insLabQuery='insert into myLabs(`title`,`landing`) values(?,?)';
+    //     $labStatement=$db->prepare($insLabQuery);
+    //     $labStatement->bind_param('ss',$labnameForDb,$lablandingForDb);
+    //     $labStatement->execute();              
 
-//         echo '<div class="messages"><h4>Added ' . $labname . 'to Labs!</h4>';
+    //     echo '<div class="messages"><h4>Added ' . $labname . 'to Labs!</h4>';
 
-//         $labStatement->close();
+    //     $labStatement->close();
 
 
-//       }
-//     }
-//  }
+    //   }
+    // }
+ }
 // echo '<h4>' . $dbOk . '/<h4>'
 // ?>
 <!--     
@@ -111,7 +110,7 @@
             <div class="formData">
 
               <label class="field" for="usernames">Username:</label>
-              <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
+              <div class="value"><input type="text" size="60" value="<?php/* if ($havePost && $errors != '') {
                                                                           echo $username;
                                                                         } ?>" name="usernames" id="usernames" /></div>
 
