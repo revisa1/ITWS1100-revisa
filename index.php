@@ -16,6 +16,7 @@
   $dbOk=false;
   //$success=false;
   @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
+  echo '123';
   if ($db->connect_error){
     echo '<div class="messages">Could not connect to the database. Error: ';
     echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
@@ -24,7 +25,7 @@
   }
   $havePost=isset($_POST['save']);
   $errors='';
-  echo 'abc'
+  echo 'abc';
   
   /*
 //   if ($havePost) {
