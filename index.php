@@ -15,8 +15,8 @@
   echo '000';
   $dbOk=false;
   //$success=false;
-  //$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
-  @$db = new mysqli('localhost', 'root', 'nlg7ejrB_', 'mySite');
+  @$db=new mysqli($GLOBALS['svr'],'root','nlg7ejrB_','mySite');
+  //@$db = new mysqli('localhost', 'root', 'nlg7ejrB_', 'mySite');
   echo '123';
   if ($db->connect_error){
     echo '<div class="messages">Could not connect to the database. Error: ';
