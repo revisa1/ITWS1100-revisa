@@ -35,7 +35,7 @@
     $userType = htmlspecialchars(trim($_POST["userTypes"]));
     $labname = htmlspecialchars(trim($_POST['labnames']));
     $lablanding = htmlspecialchars(trim($_POST['lablandings']));
-          
+    echo 'abc';      
     $focusId = ''; 
      
     if ($username == '') {
