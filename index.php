@@ -24,8 +24,7 @@
   }
   $havePost=isset($_POST['save']);
   $errors='';
-  echo '<h4>' . $dbOk . '</h4>';
-
+  echo 'abc'
   
   /*
 //   if ($havePost) {
