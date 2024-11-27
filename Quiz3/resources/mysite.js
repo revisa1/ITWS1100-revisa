@@ -65,7 +65,7 @@ function whichForm(){
 
 
 $(document).ready(function(){
-  var submitted = document.getElementById('successData').getAttribute('data-success');
+  var submitted = document.getElementById('successData').dataset.success === 'true';
   if (submitted) {
     $("#loginform").hide();
     $("#logoutButton").show();
