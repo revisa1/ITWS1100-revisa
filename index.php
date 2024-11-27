@@ -111,7 +111,7 @@
             <div class="formData">
 
               <label class="field" for="usernames">Username:</label>
-              <div class="value"><input type="text" size="60" value="<?php/if ($havePost && $errors != '') {
+              <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
                                                                           echo $username;
                                                                         } ?>" name="usernames" id="usernames" /></div>
 
