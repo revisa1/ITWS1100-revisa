@@ -13,6 +13,8 @@
 
 <?php
   echo '000';
+  echo '$GLOBALS['svr']';
+
   $dbOk=false;
   //$success=false;
   @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
