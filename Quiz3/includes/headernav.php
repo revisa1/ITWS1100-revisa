@@ -34,7 +34,7 @@
           
           <?php
           
-            @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
+            @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
             $relPath=$GLOBALS['iit'] . 'labs/';
             $query='select * from myLabs';
             $result=$db->query($query);
