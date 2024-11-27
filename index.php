@@ -86,7 +86,7 @@
         $insLabQuery='insert into myLabs(`title`,`landing`) values(?,?)';
         $labStatement=$db->prepare($insLabQuery);
         $labStatement->bind_param('ss',$labnameForDb,$lablandingForDb);
-        $labStatment->execute();              
+        $labStatement->execute();              
 
         echo '<div class="messages"><h4>Added ' . $labname . 'to Labs!</h4>';
 
@@ -97,7 +97,7 @@
 
 ?>
     
-      <!--<div id="successData" data-success='<?php/* echo $success; */?>'></div>-->
+      <div id="successData" data-success='<?php echo $success; ?>'>
       <h3 id='loginHeader'>Login Form</h3>
       <form id="loginform" name="loginform" action="index.php" method="post" onsubmit="return checkForm(this);">
         <fieldset>

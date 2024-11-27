@@ -65,7 +65,7 @@ function whichForm(){
 
 
 $(document).ready(function(){
-  var submitted="<?php echo (boolval($success) ? 'true' : 'false') ?>";
+  var submitted = document.getElementById('successData').getAttribute('data-success');
   if (submitted) {
     $("#loginform").hide();
     $("#logoutButton").show();
