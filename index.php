@@ -15,7 +15,7 @@
   echo '000';
   $dbOk=false;
   //$success=false;
-  @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],'mySite');
+  @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
   //@$db = new mysqli('localhost', 'root', 'nlg7ejrB_', 'mySite');
   echo '12345';
   if ($db->connect_error){
