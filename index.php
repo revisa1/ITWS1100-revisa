@@ -25,6 +25,7 @@
   $havePost=isset($_POST['save']);
   $errors='';
   echo '<h4>' . $dbOk . '</h4>';
+
   
   /*
 //   if ($havePost) {
@@ -189,5 +190,5 @@
         ?>
       </table>
       */
-      ?>
-      <?php include('Quiz3/includes/footer.php');?>
+?> 
+<?php include('Quiz3/includes/footer.php');?>
