@@ -26,6 +26,7 @@
   $errors='';
   echo '<h4>' . $dbOk . '</h4>';
   
+  /*
 //   if ($havePost) {
 //     $username = htmlspecialchars(trim($_POST["usernames"]));
 //     $password = htmlspecialchars(trim($_POST["passwords"]));
@@ -188,5 +189,5 @@
         ?>
       </table>
       */
-      ?> DONT FORGET TO DELETE THIS AFTER TESTING COMMENTS-->
+      ?>
       <?php include('Quiz3/includes/footer.php');?>
