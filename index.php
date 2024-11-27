@@ -91,10 +91,12 @@
         echo '<div class="messages"><h4>Added ' . $labname . 'to Labs!</h4>';
 
         $labStatement->close();
+
+
       }
     }
  }
-
+echo '<h4>' . $dbOk . '/<h4>'
 ?>
     
       <!-- <div id="successData" data-success='<?php/* echo $success ? 'true' : 'false'; */?>'> -->
