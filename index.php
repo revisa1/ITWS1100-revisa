@@ -15,9 +15,9 @@
   echo '000';
   $dbOk=false;
   //$success=false;
-  @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],'mySite');
+  @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
   //@$db = new mysqli('localhost', 'root', 'nlg7ejrB_', 'mySite');
-  echo '123';
+  echo '12345';
   if ($db->connect_error){
     echo '<div class="messages">Could not connect to the database. Error: ';
     echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
