@@ -24,7 +24,7 @@
   }
   $havePost=isset($_POST['save']);
   $errors='';
-  echo '<h4>' . $errors . '</h4>';
+  echo '<h4>' . $dbOk . '</h4></div>';
   
 //   if ($havePost) {
 //     $username = htmlspecialchars(trim($_POST["usernames"]));
