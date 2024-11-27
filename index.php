@@ -96,7 +96,7 @@
  }
 
 ?>
-    
+    <?php echo $success?>
       <div id="successData" data-success='<?php echo $success ? 'true' : 'false'; ?>'>
       <h3 id='loginHeader'>Login Form</h3>
       <form id="loginform" name="loginform" action="index.php" method="post" onsubmit="return checkForm(this);">
