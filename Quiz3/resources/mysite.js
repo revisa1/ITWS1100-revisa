@@ -25,7 +25,15 @@ function checkForm(formObj) {
     alert("Please enter a type of user");
     formObj.userTypes.focus();
     return false;
-  }   
+  }
+  $.ajax({
+    type: "post",
+    url: "redirect.php",
+    error: function(msg) {
+      // there was a problem
+      alert(msg.status + " " + msg.statusText);
+    }
+  });  
   return true;
 }
 
@@ -34,62 +42,62 @@ function hideForm(){
   loginform.style.display('none')
 }
 
-function whichForm(){
+// function whichForm(){
   
-  if (success) {
-    $("#loginform").hide();
-    $("#logoutButton").show();
-    $('#loginHeader').hide();
-    $('#editLabsHeader').show();
-    $('#labsTable').show();
+//   if (success) {
+//     $("#loginform").hide();
+//     $("#logoutButton").show();
+//     $('#loginHeader').hide();
+//     $('#editLabsHeader').show();
+//     $('#labsTable').show();
 
-  } else {
-    $("#loginform").show();
-    $("#logoutButton").hide();
-    $('#loginHeader').show();
-    $('#editLabsHeader').hide();
-    $('#labsTable').hide();
-  }
+//   } else {
+//     $("#loginform").show();
+//     $("#logoutButton").hide();
+//     $('#loginHeader').show();
+//     $('#editLabsHeader').hide();
+//     $('#labsTable').hide();
+//   }
 
-  $("#logoutButton").click(function () {
-    $("#loginform").show();
-    $("#logoutButton").hide();
-    $("#loginform")[0].reset();
+//   $("#logoutButton").click(function () {
+//     $("#loginform").show();
+//     $("#logoutButton").hide();
+//     $("#loginform")[0].reset();
 
-    $('#loginHeader').show();
-    $('#editLabsHeader').hide();
-    $('#labsTable').hide();
-  });
+//     $('#loginHeader').show();
+//     $('#editLabsHeader').hide();
+//     $('#labsTable').hide();
+//   });
 
-}
+// }
 
 
 $(document).ready(function(){
-  var submitted = document.getElementById('successData').getAttribute('data-success') === 'true';
-  if (submitted) {
-    $("#loginform").hide();
-    $("#logoutButton").show();
-    $('#loginHeader').hide();
-    $('#editLabsHeader').show();
-    $('#labsTable').show();
+  // var submitted = document.getElementById('successData').getAttribute('data-success') === 'true';
+  // if (submitted) {
+  //   $("#loginform").hide();
+  //   $("#logoutButton").show();
+  //   $('#loginHeader').hide();
+  //   $('#editLabsHeader').show();
+  //   $('#labsTable').show();
 
-  } else {
-    $("#loginform").show();
-    $("#logoutButton").hide();
-    $('#loginHeader').show();
-    $('#editLabsHeader').hide();
-    $('#labsTable').hide();
-  }
+  // } else {
+  //   $("#loginform").show();
+  //   $("#logoutButton").hide();
+  //   $('#loginHeader').show();
+  //   $('#editLabsHeader').hide();
+  //   $('#labsTable').hide();
+  // }
 
-  $("#logoutButton").click(function () {
-    $("#loginform").show();
-    $("#logoutButton").hide();
-    $("#loginform")[0].reset();
+  // $("#logoutButton").click(function () {
+  //   $("#loginform").show();
+  //   $("#logoutButton").hide();
+  //   $("#loginform")[0].reset();
 
-    $('#loginHeader').show();
-    $('#editLabsHeader').hide();
-    $('#labsTable').hide();
-  });
+  //   $('#loginHeader').show();
+  //   $('#editLabsHeader').hide();
+  //   $('#labsTable').hide();
+  // });
 
   $("#usernames").focus();
   $('#labnames').focus();

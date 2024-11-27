@@ -1,4 +1,3 @@
-
 <?php 
   include('Quiz3/includes/conn.php');
   include('Quiz3/includes/headernav.php');
@@ -14,7 +13,7 @@
 <?php
 
   $dbOk=false;
-  //$success=false;
+  $success=false;
   @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
   if ($db->connect_error){
     echo '<div class="messages">Could not connect to the database. Error: ';
@@ -79,7 +78,7 @@
 
         echo '<div class="messages"><h4>Welcome ' . $username . '!</h4>';
 
-        //$success=true;
+        $success=true;
 
         $statement->close();
 
@@ -97,40 +96,14 @@
 
 ?>
     
-      <!-- <div id="successData" data-success='<?php/* echo $success ? 'true' : 'false'; */?>'> -->
-      <h3 id='loginHeader'>Login Form</h3>
-      <form id="loginform" name="loginform" action="index.php" method="post" onsubmit="return checkForm(this);">
-        <fieldset>
-            <div class="formData">
-
-              <label class="field" for="usernames">Username:</label>
-              <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
-                                                                          echo $username;
-                                                                        } ?>" name="usernames" id="usernames" /></div>
-
-              <label class="field" for="passwords">Password:</label>
-              <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
-                                                                          echo $password;
-                                                                        } ?>" name="passwords" id="passwords" /></div>
-
-              <label class="field" for="userTypes">Type (admin/user):</label>
-              <div class="value"><input type="text" size="10" maxlength="10" value="<?php if ($havePost && $errors != '') {
-                                                                                          echo $userType;
-                                                                                      } ?>" name="userTypes" id="userTypes" /></div>
-
-              <input type="submit" value="save" id="save" name="save" />
-            </div>
-        </fieldset>
-      </form>
-<!--
-      <button id=logoutButton>Logout</button>
+<button id=logoutButton>Logout</button>
 
       <h3>Add/Delete Labs</h3>
       <form id="editlabs" name="editlabs" action="index.php" method="post" onsubmit="return checkForm(this);">
         <fieldset>
             <div class="formData">
               <label class="field" for="labnames">Lab Name:</label>
-              <div class="value"><input type="text" size="60" value="<?php /*if ($havePost && $errors != '') {
+              <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
                                                                           echo $labname;
                                                                         } ?>" name="labnames" id="labnames" /></div>
                                                                         
@@ -184,6 +157,4 @@
         
         ?>
       </table>
-      */
-      ?> DONT FORGET TO DELETE THIS AFTER TESTING COMMENTS-->
       <?php include('Quiz3/includes/footer.php');?>
