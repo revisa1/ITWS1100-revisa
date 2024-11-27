@@ -13,7 +13,6 @@
 
 <?php
   echo '000';
-  echo '$GLOBALS['svr']';
 
   $dbOk=false;
   //$success=false;
