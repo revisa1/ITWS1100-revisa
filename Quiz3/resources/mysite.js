@@ -26,19 +26,19 @@ function checkForm(formObj) {
     formObj.userTypes.focus();
     return false;
   }
-  alert('hello');
-  $.ajax({
-    type: "post",
-    url: "redirect.php",
-    data: {
-      usrTp: formObj.userTypes.value,
-    },
-    error: function(msg) {
-      // there was a problem
-      alert(msg.status + " " + msg.statusText);
-    }
-  });  
-  return true;
+  // alert('hello');
+  // $.ajax({
+  //   type: "post",
+  //   url: "redirect.php",
+  //   data: {
+  //     usrTp: formObj.userTypes.value,
+  //   },
+  //   error: function(msg) {
+  //     // there was a problem
+  //     alert(msg.status + " " + msg.statusText);
+  //   }
+  // });  
+  // return true;
 }
 
 function hideForm(){
