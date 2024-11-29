@@ -26,6 +26,7 @@ function checkForm(formObj) {
     formObj.userTypes.focus();
     return false;
   }
+  alert('hello');
   $.ajax({
     type: "post",
     url: "redirect.php",
