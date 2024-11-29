@@ -34,11 +34,11 @@
     $username = htmlspecialchars(trim($_POST["usernames"]));
     $password = htmlspecialchars(trim($_POST["passwords"]));
     $userType = htmlspecialchars(trim($_POST["userTypes"]));
-    $labname = htmlspecialchars(trim($_POST['labnames']));
-    $lablanding = htmlspecialchars(trim($_POST['lablandings']));
+    // $labname = htmlspecialchars(trim($_POST['labnames']));
+    // $lablanding = htmlspecialchars(trim($_POST['lablandings']));
    
     $focusId = ''; 
-    if($_SERVER['PHP_SELF']=='index.php'){
+    // if($_SERVER['PHP_SELF']=='index.php'){
        if ($username == '') {
         $errors .= '<li>Username may not be blank</li>';
         if ($focusId == '') $focusId = '#usernames';
@@ -79,41 +79,41 @@
           $statement->close();
         }
       }
-    } elseif($_SERVER['PHP_SELF']=='updateLabs.php'){
+  //   } elseif($_SERVER['PHP_SELF']=='updateLabs.php'){
 
-      if ($labname == '') {
-        $errors .= '<li>Lab Number may not be blank</li>';
-        if ($focusId == '') $focusId = '#labnames';
-      }
-      if ($lablanding == '') {
-      $errors .= '<li>Lab Landing may not be blank</li>';
-      if ($focusId == '') $focusId = '#lablandings';
-      }
-      if ($errors != '') {
-        echo '<div class="messages"><h4>Please correct the following errors:</h4><ul>';
-        echo $errors;
-        echo '</ul></div>';
-        echo '<script type="text/javascript">';
-        echo '  $(document).ready(function() {';
-        echo '    $("' . $focusId . '").focus();';
-        echo '  });';
-        echo '</script>';
-      } else {
-        if ($dbOk) {
-          $labnameForDb = trim($_POST['labnames']);
-          $lablandingForDb = trim($_POST['lablandings']);
+  //     if ($labname == '') {
+  //       $errors .= '<li>Lab Number may not be blank</li>';
+  //       if ($focusId == '') $focusId = '#labnames';
+  //     }
+  //     if ($lablanding == '') {
+  //     $errors .= '<li>Lab Landing may not be blank</li>';
+  //     if ($focusId == '') $focusId = '#lablandings';
+  //     }
+  //     if ($errors != '') {
+  //       echo '<div class="messages"><h4>Please correct the following errors:</h4><ul>';
+  //       echo $errors;
+  //       echo '</ul></div>';
+  //       echo '<script type="text/javascript">';
+  //       echo '  $(document).ready(function() {';
+  //       echo '    $("' . $focusId . '").focus();';
+  //       echo '  });';
+  //       echo '</script>';
+  //     } else {
+  //       if ($dbOk) {
+  //         $labnameForDb = trim($_POST['labnames']);
+  //         $lablandingForDb = trim($_POST['lablandings']);
         
-          $insLabQuery='insert into myLabs(`title`,`landing`) values(?,?)';
-          $labStatement=$db->prepare($insLabQuery);
-          $labStatement->bind_param('ss',$labnameForDb,$lablandingForDb);
-          $labStatement->execute();              
+  //         $insLabQuery='insert into myLabs(`title`,`landing`) values(?,?)';
+  //         $labStatement=$db->prepare($insLabQuery);
+  //         $labStatement->bind_param('ss',$labnameForDb,$lablandingForDb);
+  //         $labStatement->execute();              
   
-          echo '<div class="messages"><h4>Added ' . $labname . 'to Labs!</h4>';
+  //         echo '<div class="messages"><h4>Added ' . $labname . 'to Labs!</h4>';
   
-          $labStatement->close();
-        }
-      }
-  }
+  //         $labStatement->close();
+  //       }
+  //     }
+  // }
        
 }
 
