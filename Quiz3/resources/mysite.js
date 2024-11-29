@@ -29,6 +29,9 @@ function checkForm(formObj) {
   $.ajax({
     type: "post",
     url: "redirect.php",
+    data: {
+      usrTp: formObj.userTypes.value,
+    },
     error: function(msg) {
       // there was a problem
       alert(msg.status + " " + msg.statusText);
