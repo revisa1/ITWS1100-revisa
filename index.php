@@ -38,7 +38,7 @@
     // $lablanding = htmlspecialchars(trim($_POST['lablandings']));
    
     $focusId = ''; 
-    // if($_SERVER['PHP_SELF']=='index.php'){
+    if($_SERVER['PHP_SELF']=='index.php'){
        if ($username == '') {
         $errors .= '<li>Username may not be blank</li>';
         if ($focusId == '') $focusId = '#usernames';
@@ -79,7 +79,8 @@
           $statement->close();
         }
       }
-  //   } elseif($_SERVER['PHP_SELF']=='updateLabs.php'){
+    }
+    // } elseif($_SERVER['PHP_SELF']=='updateLabs.php'){
 
   //     if ($labname == '') {
   //       $errors .= '<li>Lab Number may not be blank</li>';

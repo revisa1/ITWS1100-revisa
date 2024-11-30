@@ -2,7 +2,7 @@
     $userType=$_POST['usrTp'];
     if($userType=='admin'){
         header("Location: http://revisarpi.eastus.cloudapp.azure.com/iit/updateLabs.php");
-            exit;
+        exit;
     } elseif($userType=='user'){
         header("Location: http://revisarpi.eastus.cloudapp.azure.com/iit/index.php");
         exit;
