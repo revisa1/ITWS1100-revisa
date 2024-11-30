@@ -38,7 +38,7 @@
     // $lablanding = htmlspecialchars(trim($_POST['lablandings']));
    
     $focusId = ''; 
-    if($_SERVER['PHP_SELF']=='index.php'){
+    if(basename($_SERVER['PHP_SELF'])=='index.php'){
        if ($username == '') {
         $errors .= '<li>Username may not be blank</li>';
         if ($focusId == '') $focusId = '#usernames';
