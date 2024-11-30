@@ -56,7 +56,7 @@
                                                                         } ?>" name="lablandings" id="lablandings" /></div>
 
               <input type="submit" value="save" id="save" name="save" />
-              <input type="submit" value="logout" id="logout" name="logout" />
+              <input type="submit" value="logout" id="logout" name="logout" style='display: none;' />
             </div>
         </fieldset>
       </form>
@@ -129,6 +129,7 @@
         document.getElementById("loginform").style.display="block";
         document.getElementById("loginHeader").style.display="block";
         document.getElementById("editlabs").style.display="none";
+        document.getElementById("logout").style.display="block";
         document.getElementById("updateLabHeader").style.display="none";
       </script> ';
     }
@@ -186,6 +187,7 @@
               document.getElementById("loginform").style.display="none";
               document.getElementById("loginHeader").style.display="none";
               document.getElementById("editlabs").style.display="block";
+              document.getElementById("logout").style.display="block";
               document.getElementById("updateLabHeader").style.display="block";
               </script> ';
             } elseif ($userType=='user'){
