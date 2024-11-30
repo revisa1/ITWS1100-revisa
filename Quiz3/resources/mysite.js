@@ -115,7 +115,7 @@ $(document).ready(function(){
   $("#usernames").focus();
   $('#labnames').focus();
 
-  document.getElementById('logoutButton').onclick=logout;
+  // document.getElementById('logoutButton').onclick=logout;
 
   $('.deleteLabs').click(function() {
     if(confirm("Remove Lab? (This action cannot be undone.)")) {
