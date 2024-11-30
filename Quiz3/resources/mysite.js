@@ -50,7 +50,7 @@ function validLogin(){
 function logout(){
   document.getElementById("loginform").style.display="block";
   document.getElementById("editlabs").style.display="none";
-  document.getElementByID("logoutButton").style.display="none";
+  document.getElementById("logoutButton").style.display="none";
 }
 
 // function whichForm(){
