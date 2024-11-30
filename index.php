@@ -149,7 +149,7 @@
       <!-- <button id=logoutButton style='display: hidden;'>Logout</button> -->
 
       <!-- <h3>Add/Delete Labs</h3> -->
-      <form id="editlabs" name="editlabs" action="index.php" method="post" styyle='display: none;' onsubmit="return checkForm(this);">
+      <form id="editlabs" name="editlabs" action="index.php" method="post" style='display: none;' onsubmit="return checkForm(this);">
         <fieldset>
             <div class="formData">
               <label class="field" for="labnames">Lab Name:</label>
@@ -167,9 +167,8 @@
         </fieldset>
       </form>
 
-      <h3 id='editLabsHeader'>Labs Add/Remove</h3>
       
-      <table id="labsTable">
+      <!-- <table id="labsTable">
         <?php
         if ($dbOk) {
 
@@ -189,7 +188,7 @@
               echo '</td><td>';
               echo htmlspecialchars($record['landing']);
               echo '</td><td>';
-              echo '<img src="labs/lab09/resources/delete.png" class="deleteLab" width="16" height="16" alt="delete lab"/>';
+              echo '<img src="labs/lab9/resources/delete.png" class="deleteLab" width="16" height="16" alt="delete lab"/>';
               echo '</td></tr>';
               // Uncomment the following three lines to see the underlying
               // associative array for each record.
@@ -207,6 +206,5 @@
         
         ?>
       </table>
-      */
-?> 
+       -->
 <?php include('Quiz3/includes/footer.php');?>
