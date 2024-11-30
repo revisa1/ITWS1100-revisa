@@ -129,7 +129,6 @@
         document.getElementById("loginform").style.display="block";
         document.getElementById("loginHeader").style.display="block";
         document.getElementById("editlabs").style.display="none";
-        document.getElementById("logoutButton").style.display="none";
         document.getElementById("updateLabHeader").style.display="none";
       </script> ';
     }
@@ -187,14 +186,13 @@
               document.getElementById("loginform").style.display="none";
               document.getElementById("loginHeader").style.display="none";
               document.getElementById("editlabs").style.display="block";
-              document.getElementById("logoutButton").style.display="block";
               document.getElementById("updateLabHeader").style.display="block";
               </script> ';
             } elseif ($userType=='user'){
               echo '<script type="text/JavaScript"> 
               document.getElementById("loginform").style.display="none";
               document.getElementById("loginHeader").style.display="none";
-              document.getElementById("logoutButton").style.display="block";
+              document.getElementById("logout").style.display="block";
               </script> ';
             }
 
