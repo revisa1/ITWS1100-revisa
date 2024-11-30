@@ -37,9 +37,8 @@
           var loginForm=getElementById("loginform");
           loginForm.style.display="none";
           var labForm=getElementById("editlabs");
-          labForm.style.display="block";
-        } 
-      </script> '
+          labForm.style.display="block"; 
+        </script> ';
       
       $username = htmlspecialchars(trim($_POST["usernames"]));
       $password = htmlspecialchars(trim($_POST["passwords"]));
