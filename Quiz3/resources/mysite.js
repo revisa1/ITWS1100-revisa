@@ -27,17 +27,17 @@ function checkForm(formObj) {
     return false;
   }
   // alert('hello');
-  $.ajax({
-    type: "post",
-    url: "redirect.php",
-    data: {
-      usrTp: formObj.userTypes.value,
-    },
-    error: function(msg) {
-      // there was a problem
-      alert(msg.status + " " + msg.statusText);
-    }
-  });  
+  // $.ajax({
+  //   type: "post",
+  //   url: "redirect.php",
+  //   data: {
+  //     usrTp: formObj.userTypes.value,
+  //   },
+  //   error: function(msg) {
+  //     // there was a problem
+  //     alert(msg.status + " " + msg.statusText);
+  //   }
+  // });  
   return true;
 }
 
