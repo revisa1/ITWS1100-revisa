@@ -39,7 +39,7 @@
         </fieldset>
       </form>
 
-      <button id=logoutButton style='display: none;' >Logout</button>
+      <!-- <button id=logoutButton style='display: none;' onclick=<?php $loggedIn=false;?>>Logout</button> -->
 
       <h3 id=updateLabHeader style='display:none;'>Add/Delete Labs</h3>
       <form id="editlabs" name="editlabs" action="index.php" method="post" style='display: none;' onsubmit="return checkForm(this);">
@@ -56,6 +56,7 @@
                                                                         } ?>" name="lablandings" id="lablandings" /></div>
 
               <input type="submit" value="save" id="save" name="save" />
+              <input type="submit" value="logout" id="logout" name="logout" />
             </div>
         </fieldset>
       </form>
@@ -115,11 +116,23 @@
     $dbOk = true;
   }
   $havePost=isset($_POST['save']);
+  $haveLogout=isset($_POST['logout']);
   $errors='';
 
 
 
   if ($havePost) {
+
+    if($haveLogout){
+      $loggedIn=false;
+      echo '<script type="text/JavaScript"> 
+        document.getElementById("loginform").style.display="block";
+        document.getElementById("loginHeader").style.display="block";
+        document.getElementById("editlabs").style.display="none";
+        document.getElementById("logoutButton").style.display="none";
+        document.getElementById("updateLabHeader").style.display="none";
+      </script> ';
+    }
 
     if(!$loggedIn){
 
@@ -127,8 +140,7 @@
       $username = htmlspecialchars(trim($_POST["usernames"]));
       $password = htmlspecialchars(trim($_POST["passwords"]));
       $userType = htmlspecialchars(trim($_POST["userTypes"]));
-      // $labname = htmlspecialchars(trim($_POST['labnames']));
-      // $lablanding = htmlspecialchars(trim($_POST['lablandings']));
+
     
       $focusId = ''; 
       // if(basename($_SERVER['PHP_SELF'])=='index.php'){
@@ -190,55 +202,56 @@
           }
         }
     }
-    // } elseif($loggedIn){
-    //   echo '<script type="text/JavaScript"> 
-    //       var loginForm=getElementById("loginform");
-    //       loginForm.style.display="block";
-    //       var labForm=getElementById("editlabs");
-    //       labForm.style.display="none";
-    //     } 
-    //   </script> '
-    //   $loggedIn=false;
-    // }
+    } elseif($loggedIn){
+
+
+      $labname = htmlspecialchars(trim($_POST['labnames']));
+      $lablanding = htmlspecialchars(trim($_POST['lablandings']));
+
+      $focusId = ''; 
+
+      if ($labname == '') {
+        $errors .= '<li>Lab Number may not be blank</li>';
+        if ($focusId == '') $focusId = '#labnames';
+      }
+      if ($lablanding == '') {
+        $errors .= '<li>Lab Landing may not be blank</li>';
+        if ($focusId == '') $focusId = '#lablandings';
+      }
+      
+      if ($errors != '') {
+        echo '<div class="messages"><h4>Please correct the following errors:</h4><ul>';
+        echo $errors;
+        echo '</ul></div>';
+        echo '<script type="text/javascript">';
+        echo '  $(document).ready(function() {';
+        echo '    $("' . $focusId . '").focus();';
+        echo '  });';
+        echo '</script>';
+      } else {
+        if ($dbOk) {
+          $labnameForDb = trim($_POST['labnames']);
+          $lablandingForDb = trim($_POST['lablandings']);
+        
+          $insLabQuery='insert into myLabs(`title`,`landing`) values(?,?)';
+          $labStatement=$db->prepare($insLabQuery);
+          $labStatement->bind_param('ss',$labnameForDb,$lablandingForDb);
+          $labStatement->execute();              
+
+          echo '<div class="messages"><h4>Added ' . $labname . 'to Labs!</h4>';
+
+          $labStatement->close();
+
+        }
+      }
+
+    }
 
     
     // } elseif($_SERVER['PHP_SELF']=='updateLabs.php'){
 
-  //     if ($labname == '') {
-  //       $errors .= '<li>Lab Number may not be blank</li>';
-  //       if ($focusId == '') $focusId = '#labnames';
-  //     }
-  //     if ($lablanding == '') {
-  //     $errors .= '<li>Lab Landing may not be blank</li>';
-  //     if ($focusId == '') $focusId = '#lablandings';
-  //     }
-  //     if ($errors != '') {
-  //       echo '<div class="messages"><h4>Please correct the following errors:</h4><ul>';
-  //       echo $errors;
-  //       echo '</ul></div>';
-  //       echo '<script type="text/javascript">';
-  //       echo '  $(document).ready(function() {';
-  //       echo '    $("' . $focusId . '").focus();';
-  //       echo '  });';
-  //       echo '</script>';
-  //     } else {
-  //       if ($dbOk) {
-  //         $labnameForDb = trim($_POST['labnames']);
-  //         $lablandingForDb = trim($_POST['lablandings']);
-        
-  //         $insLabQuery='insert into myLabs(`title`,`landing`) values(?,?)';
-  //         $labStatement=$db->prepare($insLabQuery);
-  //         $labStatement->bind_param('ss',$labnameForDb,$lablandingForDb);
-  //         $labStatement->execute();              
 
-  //         echo '<div class="messages"><h4>Added ' . $labname . 'to Labs!</h4>';
 
-  //         $labStatement->close();
-  //       }
-  //     }
-  // }
-      
-  }
 
 ?>
 <?php include('Quiz3/includes/footer.php');?>
