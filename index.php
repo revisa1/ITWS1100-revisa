@@ -39,7 +39,7 @@
         </fieldset>
       </form>
 
-      <!-- <button id=logoutButton style='display: hidden;'>Logout</button> -->
+      <button id=logoutButton style='display: hidden;' onclick='logout()'>Logout</button>
 
       <!-- <h3>Add/Delete Labs</h3> -->
       <form id="editlabs" name="editlabs" action="index.php" method="post" style='display: none;' onsubmit="return checkForm(this);">
@@ -174,13 +174,16 @@
               echo '<script type="text/JavaScript"> 
               document.getElementById("loginform").style.display="none";
               document.getElementById("editlabs").style.display="block";
+              document.getElementByID("logoutButton").style.display="block";
               </script> ';
             } elseif ($userType=='user'){
               echo '<script type="text/JavaScript"> 
               document.getElementById("loginform").style.display="none";
+              document.getElementById("logoutButton").style.display="block";
               </script> ';
             }
 
+            $loggedIn=true;
           }
         }
     }

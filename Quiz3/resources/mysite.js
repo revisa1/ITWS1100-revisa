@@ -48,10 +48,9 @@ function validLogin(){
   labForm.style.display='block';
 }
 function logout(){
-  var loginForm=getElementById('loginform');
-  loginForm.style.display='block';
-  var labForm=getElementById('editlabs');
-  labForm.style.display='none';
+  document.getElementById("loginform").style.display="block";
+  document.getElementById("editlabs").style.display="none";
+  document.getElementByID("logoutButton").style.display="none";
 }
 
 // function whichForm(){
