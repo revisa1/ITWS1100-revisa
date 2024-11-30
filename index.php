@@ -46,12 +46,12 @@
         <fieldset>
             <div class="formData">
               <label class="field" for="labnames" id='labnamesLabel'>Lab Name:</label>
-              <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
+              <div class="value" id='labnamesInput'><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
                                                                           echo $labname;
                                                                         } ?>" name="labnames" id="labnames" /></div>
                                                                         
               <label class="field" for="lablandings" id='lablandingsLabel'>Lab Landing:</label>
-              <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
+              <div class="value" id='lablandingsInput'><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
                                                                           echo $lablanding;
                                                                         } ?>" name="lablandings" id="lablandings" /></div>
 
@@ -194,7 +194,9 @@
               document.getElementById("loginHeader").style.display="none";
               document.getElementById("editlabs").style.display="block";
               document.getElementById("labnamesLabel").style.display="none";
+              document.getElementById("labnamesInput").style.display="none";
               document.getElementById("lablandingsLabel").style.display="none";
+              document.getElementById("lablandingsInput").style.display="none";
               </script> ';
             }
 
