@@ -170,10 +170,17 @@
             //$success=true;
 
             $statement->close();
-            echo '<script type="text/JavaScript"> 
+            if($userType=='admin'){
+              echo '<script type="text/JavaScript"> 
               document.getElementById("loginform").style.display="none";
               document.getElementById("editlabs").style.display="block";
-            </script> ';
+              </script> ';
+            } elseif ($userType=='user'){
+              echo '<script type="text/JavaScript"> 
+              document.getElementById("loginform").style.display="none";
+              </script> ';
+            }
+
           }
         }
     }
