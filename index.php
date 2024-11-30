@@ -34,9 +34,9 @@
     if(!$loggedIn){
 
       echo '<script type="text/JavaScript"> 
-          var loginForm=getElementById("loginform");
+          var loginForm=document.getElementById("loginform");
           loginForm.style.display="none";
-          var labForm=getElementById("editlabs");
+          var labForm=document.getElementById("editlabs");
           labForm.style.display="block"; 
         </script> ';
       
