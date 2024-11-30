@@ -41,11 +41,17 @@ function checkForm(formObj) {
   return true;
 }
 
-function hideForm(){
+function validLogin(){
   var loginForm=getElementById('loginform');
   loginForm.style.display='none';
   var labForm=getElementById('editlabs');
   labForm.style.display='block';
+}
+function logout(){
+  var loginForm=getElementById('loginform');
+  loginForm.style.display='block';
+  var labForm=getElementById('editlabs');
+  labForm.style.display='none';
 }
 
 // function whichForm(){

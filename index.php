@@ -14,7 +14,7 @@
 <?php
 
   $dbOk=false;
-  //$success=false;
+  $loggedIn=false;
   @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
   //@$db = new mysqli('localhost', 'root', 'nlg7ejrB_', 'mySite');
 
@@ -31,54 +31,76 @@
   
   if ($havePost) {
 
-    $username = htmlspecialchars(trim($_POST["usernames"]));
-    $password = htmlspecialchars(trim($_POST["passwords"]));
-    $userType = htmlspecialchars(trim($_POST["userTypes"]));
-    // $labname = htmlspecialchars(trim($_POST['labnames']));
-    // $lablanding = htmlspecialchars(trim($_POST['lablandings']));
-   
-    $focusId = ''; 
-    // if(basename($_SERVER['PHP_SELF'])=='index.php'){
-       if ($username == '') {
-        $errors .= '<li>Username may not be blank</li>';
-        if ($focusId == '') $focusId = '#usernames';
-      }
-      if ($password == '') {
-        $errors .= '<li>Password may not be blank</li>';
-        if ($focusId == '') $focusId = '#passwords';
-      }
-      if ($userType == '') {
-        $errors .= '<li>User Type may not be blank</li>';
-        if ($focusId == '') $focusId = '#userTypes';
-      }
+    if(!$loggedIn){
+
+      echo '<script type="text/JavaScript"> 
+          var loginForm=getElementById("loginform");
+          loginForm.style.display="none";
+          var labForm=getElementById("editlabs");
+          labForm.style.display="block";
+        } 
+      </script> '
       
-      if ($errors != '') {
-        echo '<div class="messages"><h4>Please correct the following errors:</h4><ul>';
-        echo $errors;
-        echo '</ul></div>';
-        echo '<script type="text/javascript">';
-        echo '  $(document).ready(function() {';
-        echo '    $("' . $focusId . '").focus();';
-        echo '  });';
-        echo '</script>';
-      } else {
-        if ($dbOk) {
-          $usernameForDb = trim($_POST["usernames"]);
-          $passwordForDb = trim($_POST["passwords"]);
-          $userTypeForDb = trim($_POST["userTypes"]);
-        
-          $insQuery = "insert into mySiteUsers (`username`,`pw`,`userType`) values(?,?,?)";//actors=table name, last_names,etc.. field names
-          $statement = $db->prepare($insQuery);
-          $statement->bind_param("sss", $usernameForDb, $passwordForDb, $userTypeForDb);
-          $statement->execute();
-
-          echo '<div class="messages"><h4>Welcome ' . $username . '!</h4>';
-
-          //$success=true;
-
-          $statement->close();
+      $username = htmlspecialchars(trim($_POST["usernames"]));
+      $password = htmlspecialchars(trim($_POST["passwords"]));
+      $userType = htmlspecialchars(trim($_POST["userTypes"]));
+      // $labname = htmlspecialchars(trim($_POST['labnames']));
+      // $lablanding = htmlspecialchars(trim($_POST['lablandings']));
+    
+      $focusId = ''; 
+      // if(basename($_SERVER['PHP_SELF'])=='index.php'){
+        if ($username == '') {
+          $errors .= '<li>Username may not be blank</li>';
+          if ($focusId == '') $focusId = '#usernames';
         }
-      }
+        if ($password == '') {
+          $errors .= '<li>Password may not be blank</li>';
+          if ($focusId == '') $focusId = '#passwords';
+        }
+        if ($userType == '') {
+          $errors .= '<li>User Type may not be blank</li>';
+          if ($focusId == '') $focusId = '#userTypes';
+        }
+        
+        if ($errors != '') {
+          echo '<div class="messages"><h4>Please correct the following errors:</h4><ul>';
+          echo $errors;
+          echo '</ul></div>';
+          echo '<script type="text/javascript">';
+          echo '  $(document).ready(function() {';
+          echo '    $("' . $focusId . '").focus();';
+          echo '  });';
+          echo '</script>';
+        } else {
+          if ($dbOk) {
+            $usernameForDb = trim($_POST["usernames"]);
+            $passwordForDb = trim($_POST["passwords"]);
+            $userTypeForDb = trim($_POST["userTypes"]);
+          
+            $insQuery = "insert into mySiteUsers (`username`,`pw`,`userType`) values(?,?,?)";//actors=table name, last_names,etc.. field names
+            $statement = $db->prepare($insQuery);
+            $statement->bind_param("sss", $usernameForDb, $passwordForDb, $userTypeForDb);
+            $statement->execute();
+
+            echo '<div class="messages"><h4>Welcome ' . $username . '!</h4>';
+
+            //$success=true;
+
+            $statement->close();
+          }
+        }
+    }
+    // } elseif($loggedIn){
+    //   echo '<script type="text/JavaScript"> 
+    //       var loginForm=getElementById("loginform");
+    //       loginForm.style.display="block";
+    //       var labForm=getElementById("editlabs");
+    //       labForm.style.display="none";
+    //     } 
+    //   </script> '
+    //   $loggedIn=false;
+    // }
+
     
     // } elseif($_SERVER['PHP_SELF']=='updateLabs.php'){
 
