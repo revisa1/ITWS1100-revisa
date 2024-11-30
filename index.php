@@ -14,7 +14,7 @@
 
     
       
-      <!-- <h3 id='loginHeader'>Login Form</h3> -->
+      <h3 id='loginHeader'>Login Form</h3>
       <form id="loginform" name="loginform" action="index.php" method="post" onsubmit="return checkForm(this);">
         <fieldset>
             <div class="formData">
@@ -41,7 +41,7 @@
 
       <button id=logoutButton style='display: none;' >Logout</button>
 
-      <!-- <h3>Add/Delete Labs</h3> -->
+      <h3 id=updateLabButton>Add/Delete Labs</h3>
       <form id="editlabs" name="editlabs" action="index.php" method="post" style='display: none;' onsubmit="return checkForm(this);">
         <fieldset>
             <div class="formData">
@@ -173,12 +173,15 @@
             if($userType=='admin'){
               echo '<script type="text/JavaScript"> 
               document.getElementById("loginform").style.display="none";
+              document.getElementById("loginHeader").style.display="none";
               document.getElementById("editlabs").style.display="block";
               document.getElementById("logoutButton").style.display="block";
+              document.getElementById("updateLabButton").style.display="block";
               </script> ';
             } elseif ($userType=='user'){
               echo '<script type="text/JavaScript"> 
               document.getElementById("loginform").style.display="none";
+              document.getElementById("loginHeader").style.display="none";
               document.getElementById("logoutButton").style.display="block";
               </script> ';
             }
