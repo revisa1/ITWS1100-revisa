@@ -39,7 +39,7 @@
         </fieldset>
       </form>
 
-      <button id=logoutButton style='display: none;' onclick='logout()'>Logout</button>
+      <button id=logoutButton style='display: none;' >Logout</button>
 
       <!-- <h3>Add/Delete Labs</h3> -->
       <form id="editlabs" name="editlabs" action="index.php" method="post" style='display: none;' onsubmit="return checkForm(this);">
