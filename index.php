@@ -45,18 +45,18 @@
       <form id="editlabs" name="editlabs" action="index.php" method="post" style='display: none;' onsubmit="return checkForm(this);">
         <fieldset>
             <div class="formData">
-              <label class="field" for="labnames">Lab Name:</label>
+              <label class="field" for="labnames" id='labnamesLabel'>Lab Name:</label>
               <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
                                                                           echo $labname;
                                                                         } ?>" name="labnames" id="labnames" /></div>
                                                                         
-              <label class="field" for="lablandings">Lab Landing:</label>
+              <label class="field" for="lablandings" id='lablandingsLabel'>Lab Landing:</label>
               <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
                                                                           echo $lablanding;
                                                                         } ?>" name="lablandings" id="lablandings" /></div>
 
               <input type="submit" value="save" id="save" name="save" />
-              <input type="submit" value="logout" id="logout" name="logout" style='display: none;' />
+              <input type="submit" value="logout" id="logout" name="logout" />
             </div>
         </fieldset>
       </form>
@@ -129,7 +129,6 @@
         document.getElementById("loginform").style.display="block";
         document.getElementById("loginHeader").style.display="block";
         document.getElementById("editlabs").style.display="none";
-        document.getElementById("logout").style.display="block";
         document.getElementById("updateLabHeader").style.display="none";
       </script> ';
     }
@@ -187,14 +186,15 @@
               document.getElementById("loginform").style.display="none";
               document.getElementById("loginHeader").style.display="none";
               document.getElementById("editlabs").style.display="block";
-              document.getElementById("logout").style.display="block";
               document.getElementById("updateLabHeader").style.display="block";
               </script> ';
             } elseif ($userType=='user'){
               echo '<script type="text/JavaScript"> 
               document.getElementById("loginform").style.display="none";
               document.getElementById("loginHeader").style.display="none";
-              document.getElementById("logout").style.display="block";
+              document.getElementById("editlabs").style.display="block";
+              document.getElementById("labnamesLabel").style.display="none";
+              document.getElementById("lablandingsLabel").style.display="none";
               </script> ';
             }
 
