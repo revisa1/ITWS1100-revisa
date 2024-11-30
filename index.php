@@ -105,7 +105,7 @@
 <?php
 
   $dbOk=false;
-  $loggedIn=false;
+  // $loggedIn=false;
   @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
   //@$db = new mysqli('localhost', 'root', 'nlg7ejrB_', 'mySite');
 
@@ -121,7 +121,7 @@
   $errors='';
 
   if ($haveLogout){
-    $loggedIn=false;
+    // $loggedIn=false;
     echo '<script type="text/JavaScript"> 
     document.getElementById("loginform").style.display="block";
     document.getElementById("loginHeader").style.display="block";
@@ -196,7 +196,7 @@
               </script> ';
             }
 
-            $loggedIn=true;
+            // $loggedIn=true;
           }
         }
     // }
