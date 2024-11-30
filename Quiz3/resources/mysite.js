@@ -42,8 +42,10 @@ function checkForm(formObj) {
 }
 
 function hideForm(){
-  var loginform=getElementById('loginform')
-  loginform.style.display('none')
+  var loginForm=getElementById('loginform');
+  loginForm.style.display='none';
+  var labForm=getElementById('editlabs');
+  labForm.style.display='block';
 }
 
 // function whichForm(){

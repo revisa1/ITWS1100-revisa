@@ -38,7 +38,7 @@
     // $lablanding = htmlspecialchars(trim($_POST['lablandings']));
    
     $focusId = ''; 
-    if(basename($_SERVER['PHP_SELF'])=='index.php'){
+    // if(basename($_SERVER['PHP_SELF'])=='index.php'){
        if ($username == '') {
         $errors .= '<li>Username may not be blank</li>';
         if ($focusId == '') $focusId = '#usernames';
@@ -79,7 +79,7 @@
           $statement->close();
         }
       }
-    }
+    
     // } elseif($_SERVER['PHP_SELF']=='updateLabs.php'){
 
   //     if ($labname == '') {
@@ -121,7 +121,7 @@
 ?>
     
       
-      <h3 id='loginHeader'>Login Form</h3>
+      <!-- <h3 id='loginHeader'>Login Form</h3> -->
       <form id="loginform" name="loginform" action="index.php" method="post" onsubmit="return checkForm(this);">
         <fieldset>
             <div class="formData">
@@ -145,15 +145,15 @@
             </div>
         </fieldset>
       </form>
-<!--
-      <button id=logoutButton>Logout</button>
 
-      <h3>Add/Delete Labs</h3>
-      <form id="editlabs" name="editlabs" action="index.php" method="post" onsubmit="return checkForm(this);">
+      <!-- <button id=logoutButton style='display: hidden;'>Logout</button> -->
+
+      <!-- <h3>Add/Delete Labs</h3> -->
+      <form id="editlabs" name="editlabs" action="index.php" method="post" styyle='display: none;' onsubmit="return checkForm(this);">
         <fieldset>
             <div class="formData">
               <label class="field" for="labnames">Lab Name:</label>
-              <div class="value"><input type="text" size="60" value="<?php /*if ($havePost && $errors != '') {
+              <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
                                                                           echo $labname;
                                                                         } ?>" name="labnames" id="labnames" /></div>
                                                                         
