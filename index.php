@@ -55,7 +55,7 @@
                                                                           echo $lablanding;
                                                                         } ?>" name="lablandings" id="lablandings" /></div>
 
-              <input type="submit" value="save" id="save" name="save" />
+              <input type="submit" value="saveLab" id="saveLab" name="saveLab" />
               <input type="submit" value="logout" id="logout" name="logout" />
             </div>
         </fieldset>
@@ -116,6 +116,7 @@
     $dbOk = true;
   }
   $havePost=isset($_POST['save']);
+  $haveLabPost=isset($_POST['saveLab']);
   $haveLogout=isset($_POST['logout']);
   $errors='';
 
@@ -128,7 +129,7 @@
     document.getElementById("updateLabHeader").style.display="none";
     </script> ';
   } elseif($havePost){
-    if(!$loggedIn){
+    // if(!$loggedIn){
 
       
       $username = htmlspecialchars(trim($_POST["usernames"]));
@@ -198,8 +199,8 @@
             $loggedIn=true;
           }
         }
-    }
-    } elseif($loggedIn){
+    // }
+    } elseif($haveLabPost){
 
 
       $labname = htmlspecialchars(trim($_POST['labnames']));
