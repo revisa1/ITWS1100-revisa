@@ -174,7 +174,7 @@
               echo '<script type="text/JavaScript"> 
               document.getElementById("loginform").style.display="none";
               document.getElementById("editlabs").style.display="block";
-              document.getElementByID("logoutButton").style.display="block";
+              document.getElementById("logoutButton").style.display="block";
               </script> ';
             } elseif ($userType=='user'){
               echo '<script type="text/JavaScript"> 
