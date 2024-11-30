@@ -39,7 +39,7 @@
         </fieldset>
       </form>
 
-      <!-- <button id=logoutButton style='display: none;' onclick=<?php $loggedIn=false;?>>Logout</button> -->
+
 
       <h3 id=updateLabHeader style='display:none;'>Add/Delete Labs</h3>
       <form id="editlabs" name="editlabs" action="index.php" method="post" style='display: none;' onsubmit="return checkForm(this);">
@@ -62,7 +62,7 @@
       </form>
 
       
-      <!-- <table id="labsTable">
+      <table id="labsTable">
         <?php
         if ($dbOk) {
 
@@ -100,7 +100,7 @@
         
         ?>
       </table>
-       -->
+      
 
 <?php
 
