@@ -47,11 +47,11 @@ function validLogin(){
   var labForm=getElementById('editlabs');
   labForm.style.display='block';
 }
-function logout(){
-  document.getElementById("loginform").style.display="block";
-  document.getElementById("editlabs").style.display="none";
-  document.getElementById("logoutButton").style.display="none";
-}
+// function logout(){
+//   document.getElementById("loginform").style.display="block";
+//   document.getElementById("editlabs").style.display="none";
+//   document.getElementById("logoutButton").style.display="none";
+// }
 
 // function whichForm(){
   
@@ -109,7 +109,12 @@ $(document).ready(function(){
   //   $('#editLabsHeader').hide();
   //   $('#labsTable').hide();
   // });
-
+  function logout(){
+    document.getElementById("loginform").style.display="block";
+    document.getElementById("editlabs").style.display="none";
+    document.getElementById("logoutButton").style.display="none";
+  }
+  
   $("#usernames").focus();
   $('#labnames').focus();
 
