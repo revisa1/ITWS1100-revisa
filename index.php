@@ -33,12 +33,6 @@
 
     if(!$loggedIn){
 
-      echo '<script type="text/JavaScript"> 
-          var loginForm=document.getElementById("loginform");
-          loginForm.style.display="none";
-          var labForm=document.getElementById("editlabs");
-          labForm.style.display="block"; 
-        </script> ';
       
       $username = htmlspecialchars(trim($_POST["usernames"]));
       $password = htmlspecialchars(trim($_POST["passwords"]));
@@ -86,6 +80,12 @@
             //$success=true;
 
             $statement->close();
+            echo '<script type="text/JavaScript"> 
+              var loginForm=document.getElementById("loginform");
+              loginForm.style.display="none";
+              var labForm=document.getElementById("editlabs");
+              labForm.style.display="block"; 
+            </script> ';
           }
         }
     }
