@@ -13,17 +13,17 @@
 
 <?php
 
-  // $dbOk=false;
-  // // $loggedIn=false;
-  // @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
-  // //@$db = new mysqli('localhost', 'root', 'nlg7ejrB_', 'mySite');
+  $dbOk=false;
+  // $loggedIn=false;
+  @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
+  //@$db = new mysqli('localhost', 'root', 'nlg7ejrB_', 'mySite');
 
-  // if ($db->connect_error){
-  //   echo '<div class="messages">Could not connect to the database. Error: ';
-  //   echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
-  // } else {
-  //   $dbOk = true;
-  // }
+  if ($db->connect_error){
+    echo '<div class="messages">Could not connect to the database. Error: ';
+    echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
+  } else {
+    $dbOk = true;
+  }
   $havePost=isset($_POST['save']);
   $haveLabPost=isset($_POST['saveLab']);
   $haveLogout=isset($_POST['logout']);
