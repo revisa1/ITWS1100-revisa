@@ -26,18 +26,7 @@ function checkForm(formObj) {
     formObj.userTypes.focus();
     return false;
   }
-  // alert('hello');
-  // $.ajax({
-  //   type: "post",
-  //   url: "redirect.php",
-  //   data: {
-  //     usrTp: formObj.userTypes.value,
-  //   },
-  //   error: function(msg) {
-  //     // there was a problem
-  //     alert(msg.status + " " + msg.statusText);
-  //   }
-  // });  
+
   return true;
 }
 
@@ -55,119 +44,119 @@ function logout(){
   document.getElementById("updateLabHeader").style.display="none";
 }
 
-// function whichForm(){
-  
-//   if (success) {
-//     $("#loginform").hide();
-//     $("#logoutButton").show();
-//     $('#loginHeader').hide();
-//     $('#editLabsHeader').show();
-//     $('#labsTable').show();
-
-//   } else {
-//     $("#loginform").show();
-//     $("#logoutButton").hide();
-//     $('#loginHeader').show();
-//     $('#editLabsHeader').hide();
-//     $('#labsTable').hide();
-//   }
-
-//   $("#logoutButton").click(function () {
-//     $("#loginform").show();
-//     $("#logoutButton").hide();
-//     $("#loginform")[0].reset();
-
-//     $('#loginHeader').show();
-//     $('#editLabsHeader').hide();
-//     $('#labsTable').hide();
-//   });
-
-// }
+$(document).on('click', '.deleteLab', function() {
+  if(confirm("Remove Lab? (This action cannot be undone.)")) {
+      
+    // get the id of the clicked element's row
+  var curId = $(this).closest("tr").attr("id");
+    // Extract the db id of the actor from the dom id of the clicked element
+  var actorId = curId.substr(curId.indexOf("-")+1);
+    // Build the data to send. 
+  var postData = "id=" + actorId;
+    // we could also format this as json ... jQuery will (by default) 
+    // convert it into a query string anyway, e.g. 
+    // var postData = { "id" : actorId };
+    
+  $.ajax({
+    type: "post",
+    url: "lab-delete.php",
+    dataType: "json",
+    data: postData,
+    success: function(responseData, status){
+      if (responseData.errors) {
+        alert(responseData.errno + " " + responseData.error);
+      } else {
+        // Uncomment the following line to see the repsonse message from the server
+        // alert(responseData.message);
+        
+        // remove the table row in which the image was clicked
+        $("#" + curId).closest("tr").remove();
+        
+        // if a php generated message box is up, hide it:
+        $(".messages").hide();
+        
+        // populate the js message box and show it:
+        $("#jsMessages").html("<h4>Lab deleted</h4>").show();
+        
+        // re-zebra the table
+        $("#labTable tr").each(function(i){
+          if (i % 2 == 0) {
+            // we must compensate for the header row...
+            $(this).addClass("odd"); 
+          } else {
+            $(this).removeClass("odd");
+          }
+        });
+      }
+    },
+    error: function(msg) {
+      // there was a problem
+      alert(msg.status + " " + msg.statusText);
+    }
+  });      
+    
+  }
+});
 
 
 $(document).ready(function(){
-  // var submitted = document.getElementById('successData').getAttribute('data-success') === 'true';
-  // if (submitted) {
-  //   $("#loginform").hide();
-  //   $("#logoutButton").show();
-  //   $('#loginHeader').hide();
-  //   $('#editLabsHeader').show();
-  //   $('#labsTable').show();
-
-  // } else {
-  //   $("#loginform").show();
-  //   $("#logoutButton").hide();
-  //   $('#loginHeader').show();
-  //   $('#editLabsHeader').hide();
-  //   $('#labsTable').hide();
-  // }
-
-  // $("#logoutButton").click(function () {
-  //   $("#loginform").show();
-  //   $("#logoutButton").hide();
-  //   $("#loginform")[0].reset();
-
-  //   $('#loginHeader').show();
-  //   $('#editLabsHeader').hide();
-  //   $('#labsTable').hide();
-  // });
-
+  
   $("#usernames").focus();
   $('#labnames').focus();
 
-  // document.getElementById('logoutButton').onclick=logout;
+  
 
-  $('.deleteLab').click(function() {
-    if(confirm("Remove Lab? (This action cannot be undone.)")) {
+  // $('.deleteLab').click(function() {
+  //   if(confirm("Remove Lab? (This action cannot be undone.)")) {
         
-        // get the id of the clicked element's row
-      var curId = $(this).closest("tr").attr("id");
-        // Extract the db id of the actor from the dom id of the clicked element
-      var actorId = curId.substr(curId.indexOf("-")+1);
-        // Build the data to send. 
-      var postData = "id=" + actorId;
-        // we could also format this as json ... jQuery will (by default) 
-        // convert it into a query string anyway, e.g. 
-        // var postData = { "id" : actorId };
+  //       // get the id of the clicked element's row
+  //     var curId = $(this).closest("tr").attr("id");
+  //       // Extract the db id of the actor from the dom id of the clicked element
+  //     var actorId = curId.substr(curId.indexOf("-")+1);
+  //       // Build the data to send. 
+  //     var postData = "id=" + actorId;
+  //       // we could also format this as json ... jQuery will (by default) 
+  //       // convert it into a query string anyway, e.g. 
+  //       // var postData = { "id" : actorId };
         
-      $.ajax({
-        type: "post",
-        url: "lab-delete.php",
-        dataType: "json",
-        data: postData,
-        success: function(responseData, status){
-          if (responseData.errors) {
-            alert(responseData.errno + " " + responseData.error);
-          } else {
-            // Uncomment the following line to see the repsonse message from the server
-            // alert(responseData.message);
+  //     $.ajax({
+  //       type: "post",
+  //       url: "lab-delete.php",
+  //       dataType: "json",
+  //       data: postData,
+  //       success: function(responseData, status){
+  //         if (responseData.errors) {
+  //           alert(responseData.errno + " " + responseData.error);
+  //         } else {
+  //           // Uncomment the following line to see the repsonse message from the server
+  //           // alert(responseData.message);
             
-            // remove the table row in which the image was clicked
-            $("#" + curId).closest("tr").remove();
+  //           // remove the table row in which the image was clicked
+  //           $("#" + curId).closest("tr").remove();
             
-            // if a php generated message box is up, hide it:
-            $(".messages").hide();
+  //           // if a php generated message box is up, hide it:
+  //           $(".messages").hide();
             
-            // populate the js message box and show it:
-            $("#jsMessages").html("<h4>Lab deleted</h4>").show();
+  //           // populate the js message box and show it:
+  //           $("#jsMessages").html("<h4>Lab deleted</h4>").show();
             
-            // re-zebra the table
-            $("#labTable tr").each(function(i){
-              if (i % 2 == 0) {
-                // we must compensate for the header row...
-                $(this).addClass("odd"); 
-              } else {
-                $(this).removeClass("odd");
-              }
-            });
-          }
-        },
-        error: function(msg) {
-          // there was a problem
-          alert(msg.status + " " + msg.statusText);
-        }
-      });      
+  //           // re-zebra the table
+  //           $("#labTable tr").each(function(i){
+  //             if (i % 2 == 0) {
+  //               // we must compensate for the header row...
+  //               $(this).addClass("odd"); 
+  //             } else {
+  //               $(this).removeClass("odd");
+  //             }
+  //           });
+  //         }
+  //       },
+  //       error: function(msg) {
+  //         // there was a problem
+  //         alert(msg.status + " " + msg.statusText);
+  //       }
+  //     });      
         
-    }
-  });
+  //   }
+  // });
 });
