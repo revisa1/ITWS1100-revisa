@@ -239,7 +239,16 @@
           echo '<div class="messages"><h4>Added ' . $labname . 'to Labs!</h4>';
 
           $labStatement->close();
-
+          
+          echo '<script type="text/JavaScript"> 
+          document.getElementById("loginform").style.display="none";
+          document.getElementById("loginHeader").style.display="none";
+          document.getElementById("editlabs").style.display="block";
+          document.getElementById("labnamesLabel").style.display="none";
+          document.getElementById("labnamesInput").style.display="none";
+          document.getElementById("lablandingsLabel").style.display="none";
+          document.getElementById("lablandingsInput").style.display="none";
+          </script> ';
         }
       }
 
