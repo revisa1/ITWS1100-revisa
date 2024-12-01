@@ -91,7 +91,7 @@ $(document).on('click', '.deleteLab', function() {
     },
     error: function(msg) {
       // there was a problem
-      alert(msg.status + " " + msg.statusText);
+      alert(msg.status + " " + msg.statusText+"can't find lab-delete");
     }
   });      
     

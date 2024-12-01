@@ -1,7 +1,7 @@
 CREATE TABLE `myLabs` (
    `labid` smallint unsigned NOT NULL AUTO_INCREMENT,
-   `title` char(50) NOT NULL,
-   `landing` char(50) NOT NULL,
+   `title` char(100) NOT NULL,
+   `landing` char(100) NOT NULL,
    PRIMARY KEY (`labid`)
 );
 -- insert data into the tables
