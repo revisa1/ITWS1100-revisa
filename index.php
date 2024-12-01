@@ -11,7 +11,18 @@
       dynamically loading php information and databases!</h3>
 </div>
 
+<?php   $dbOk=false;
+  // $loggedIn=false;
+  @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
+  //@$db = new mysqli('localhost', 'root', 'nlg7ejrB_', 'mySite');
 
+  if ($db->connect_error){
+    echo '<div class="messages">Could not connect to the database. Error: ';
+    echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
+  } else {
+    $dbOk = true;
+  }
+?>
     
       
       <h3 id='loginHeader'>Login Form</h3>
@@ -61,23 +72,60 @@
         </fieldset>
       </form>
 
-      
+      <table id="labsTable" >
+        <?php
+        if ($dbOk) {
+
+            $query = 'select * from myLabs order by title';//all fields=*
+            $result = $db->query($query);
+            $numRecords = $result->num_rows;
+
+            echo '<tr><th>Lab Name:</th><th>Lab Landing:</th><th></th></tr>';
+            for ($i = 0; $i < $numRecords; $i++) {
+              $record = $result->fetch_assoc();
+              if ($i % 2 == 0) {
+                  echo "\n" . '<tr id="lab-' . $record['labid'] . '"><td>';
+              } else {
+                  echo "\n" . '<tr class="odd" id="lab-' . $record['labid'] . '"><td>';
+              }
+              echo htmlspecialchars($record['title']);
+              echo '</td><td>';
+              echo htmlspecialchars($record['landing']);
+              echo '</td><td>';
+              echo '<img src="labs/lab9/resources/delete.png" class="deleteLab" width="16" height="16" alt="delete lab"/>';
+              echo '</td></tr>';
+              // Uncomment the following three lines to see the underlying
+              // associative array for each record.
+              // echo '<tr><td colspan="3" style="white-space: pre;">';
+              // print_r($record);
+              // echo '</td></tr>';
+            }
+
+            $result->free();
+
+            // Finally, let's close the database
+            $db->close();
+        }
+        
+        
+        ?>
+</table>   
 
       
 
 <?php
 
-  $dbOk=false;
-  // $loggedIn=false;
-  @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
-  //@$db = new mysqli('localhost', 'root', 'nlg7ejrB_', 'mySite');
+  // $dbOk=false;
+  // // $loggedIn=false;
+  // @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
+  // //@$db = new mysqli('localhost', 'root', 'nlg7ejrB_', 'mySite');
 
-  if ($db->connect_error){
-    echo '<div class="messages">Could not connect to the database. Error: ';
-    echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
-  } else {
-    $dbOk = true;
-  }
+  // if ($db->connect_error){
+  //   echo '<div class="messages">Could not connect to the database. Error: ';
+  //   echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
+  // } else {
+  //   $dbOk = true;
+  // }
   $havePost=isset($_POST['save']);
   $haveLabPost=isset($_POST['saveLab']);
   $haveLogout=isset($_POST['logout']);
@@ -218,42 +266,5 @@
   }
 ?>
 
-<table id="labsTable" >
-        <?php
-        if ($dbOk) {
 
-            $query = 'select * from myLabs order by title';//all fields=*
-            $result = $db->query($query);
-            $numRecords = $result->num_rows;
-
-            echo '<tr><th>Lab Name:</th><th>Lab Landing:</th><th></th></tr>';
-            for ($i = 0; $i < $numRecords; $i++) {
-              $record = $result->fetch_assoc();
-              if ($i % 2 == 0) {
-                  echo "\n" . '<tr id="lab-' . $record['labid'] . '"><td>';
-              } else {
-                  echo "\n" . '<tr class="odd" id="lab-' . $record['labid'] . '"><td>';
-              }
-              echo htmlspecialchars($record['title']);
-              echo '</td><td>';
-              echo htmlspecialchars($record['landing']);
-              echo '</td><td>';
-              echo '<img src="labs/lab9/resources/delete.png" class="deleteLab" width="16" height="16" alt="delete lab"/>';
-              echo '</td></tr>';
-              // Uncomment the following three lines to see the underlying
-              // associative array for each record.
-              // echo '<tr><td colspan="3" style="white-space: pre;">';
-              // print_r($record);
-              // echo '</td></tr>';
-            }
-
-            $result->free();
-
-            // Finally, let's close the database
-            $db->close();
-        }
-        
-        
-        ?>
-</table>
 <?php include('Quiz3/includes/footer.php');?>
