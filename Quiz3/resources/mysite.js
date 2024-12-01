@@ -123,7 +123,7 @@ $(document).ready(function(){
       
     $.ajax({
       type: "post",
-      url: "http://revisarpi.eastus.cloudapp.azure.com/iit/Quiz3/lab-delete.php",
+      url: "Quiz3/lab-delete.php",
       dataType: "json",
       data: postData,
       success: function(responseData, status){
