@@ -112,24 +112,13 @@
 </table>   
 <?php
 
-  // $dbOk=false;
-
-  // @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
-
-
-  // if ($db->connect_error){
-  //   echo '<div class="messages">Could not connect to the database. Error: ';
-  //   echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
-  // } else {
-  //   $dbOk = true;
-  // }
   $havePost=isset($_POST['save']);
   $haveLabPost=isset($_POST['saveLab']);
   $haveLogout=isset($_POST['logout']);
   $errors='';
 
   if ($haveLogout){
-    // $loggedIn=false;
+
     echo '<script type="text/JavaScript"> 
     document.getElementById("loginform").style.display="block";
     document.getElementById("loginHeader").style.display="block";
@@ -137,8 +126,6 @@
     document.getElementById("updateLabHeader").style.display="none";
     </script> ';
   } elseif($havePost){
-    // if(!$loggedIn){
-
       
       $username = htmlspecialchars(trim($_POST["usernames"]));
       $password = htmlspecialchars(trim($_POST["passwords"]));
@@ -146,7 +133,7 @@
 
     
       $focusId = ''; 
-      // if(basename($_SERVER['PHP_SELF'])=='index.php'){
+
         if ($username == '') {
           $errors .= '<li>Username may not be blank</li>';
           if ($focusId == '') $focusId = '#usernames';
@@ -182,7 +169,7 @@
 
             echo '<div class="messages"><h4>Welcome ' . $username . '!</h4>';
 
-            //$success=true;
+
 
             $statement->close();
             if($userType=='admin'){
@@ -206,10 +193,10 @@
               </script> ';
             }
 
-            // $loggedIn=true;
+
           }
         }
-    // }
+
     } elseif($haveLabPost){
 
 
