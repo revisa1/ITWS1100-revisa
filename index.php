@@ -62,7 +62,7 @@
       </form>
 
       
-      <table id="labsTable" style='display:none;'>
+      <table id="labsTable" >
         <?php
         if ($dbOk) {
 
@@ -183,7 +183,7 @@
               document.getElementById("loginHeader").style.display="none";
               document.getElementById("editlabs").style.display="block";
               document.getElementById("updateLabHeader").style.display="block";
-              document.getElementById("labsTable").style.display="block";
+              // document.getElementById("labsTable").style.display="block";
               </script> ';
             } elseif ($userType=='user'){
               echo '<script type="text/JavaScript"> 
@@ -194,7 +194,7 @@
               document.getElementById("labnamesInput").style.display="none";
               document.getElementById("lablandingsLabel").style.display="none";
               document.getElementById("lablandingsInput").style.display="none";
-              document.getElementById("saveLab").style.display="none";
+              // document.getElementById("saveLab").style.display="none";
               </script> ';
             }
 
@@ -247,7 +247,7 @@
           document.getElementById("loginHeader").style.display="none";
           document.getElementById("editlabs").style.display="block";
           document.getElementById("updateLabHeader").style.display="block";
-          document.getElementById("labsTable").style.display="block";
+          // document.getElementById("labsTable").style.display="block";
           </script> ';
         }
       }
