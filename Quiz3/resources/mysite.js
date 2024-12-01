@@ -117,7 +117,7 @@ $(document).ready(function(){
 
   // document.getElementById('logoutButton').onclick=logout;
 
-  $('.deleteLabs').click(function() {
+  $('.deleteLab').click(function() {
     if(confirm("Remove Lab? (This action cannot be undone.)")) {
         
         // get the id of the clicked element's row
