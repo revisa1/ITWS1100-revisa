@@ -1,9 +1,9 @@
 <?php
   /* Delete an actor */
-  
+  include('includes/conn.php');
   /* Create a new database connection object, passing in the host, username,
      password, and database to use. The "@" suppresses errors. */
-  @$db=new mysqli($GLOBALS['svr'],'root',$GLOBALS['pwd'],'mySite');
+  @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],'nlg7ejrB_','mySite');
   // @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
   
   if ($db->connect_error) {
