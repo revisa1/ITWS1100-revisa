@@ -104,7 +104,7 @@
             $result->free();
 
             // Finally, let's close the database
-            $db->close();
+            // $db->close();
         }
         
         
