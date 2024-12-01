@@ -193,6 +193,7 @@
               document.getElementById("labnamesInput").style.display="none";
               document.getElementById("lablandingsLabel").style.display="none";
               document.getElementById("lablandingsInput").style.display="none";
+              document.getElementById("saveLab").style.display="none";
               </script> ';
             }
 
@@ -244,10 +245,7 @@
           document.getElementById("loginform").style.display="none";
           document.getElementById("loginHeader").style.display="none";
           document.getElementById("editlabs").style.display="block";
-          document.getElementById("labnamesLabel").style.display="none";
-          document.getElementById("labnamesInput").style.display="none";
-          document.getElementById("lablandingsLabel").style.display="none";
-          document.getElementById("lablandingsInput").style.display="none";
+          document.getElementById("updateLabHeader").style.display="block";
           </script> ';
         }
       }
