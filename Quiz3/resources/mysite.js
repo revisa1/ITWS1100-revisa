@@ -64,7 +64,7 @@ $(document).on('click', '.deleteLab', function() {
     data: postData,
     success: function(responseData, status){
       if (responseData.errors) {
-        alert(responseData.errno + " " + responseData.error);
+        alert(responseData.errno + " " + responseData.error+'database connection has failed');
       } else {
         // Uncomment the following line to see the repsonse message from the server
         // alert(responseData.message);
