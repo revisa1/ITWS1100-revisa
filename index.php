@@ -183,6 +183,7 @@
               document.getElementById("loginHeader").style.display="none";
               document.getElementById("editlabs").style.display="block";
               document.getElementById("updateLabHeader").style.display="block";
+              document.getElementById("labsTable").style.display="block";
               </script> ';
             } elseif ($userType=='user'){
               echo '<script type="text/JavaScript"> 
@@ -246,6 +247,7 @@
           document.getElementById("loginHeader").style.display="none";
           document.getElementById("editlabs").style.display="block";
           document.getElementById("updateLabHeader").style.display="block";
+          document.getElementById("labsTable").style.display="block";
           </script> ';
         }
       }
