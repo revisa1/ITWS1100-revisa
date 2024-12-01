@@ -113,10 +113,8 @@ $(document).ready(function(){
     var curId = $(this).closest("tr").attr("id");
       // Extract the db id of the actor from the dom id of the clicked element
     var labId = curId.substr(curId.indexOf("-")+1);
-    alert(labId);
       // Build the data to send. 
     var postData = "id=" + labId;
-    alert(postData);
       // we could also format this as json ... jQuery will (by default) 
       // convert it into a query string anyway, e.g. 
       // var postData = { "id" : actorId };
