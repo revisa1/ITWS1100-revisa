@@ -11,108 +11,6 @@
       dynamically loading php information and databases!</h3>
 </div>
 
-<?php   $dbOk=false;
-  // $loggedIn=false;
-  @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
-  //@$db = new mysqli('localhost', 'root', 'nlg7ejrB_', 'mySite');
-
-  if ($db->connect_error){
-    echo '<div class="messages">Could not connect to the database. Error: ';
-    echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
-  } else {
-    $dbOk = true;
-  }
-?>
-    
-      
-      <h3 id='loginHeader'>Login Form</h3>
-      <form id="loginform" name="loginform" action="index.php" method="post" onsubmit="return checkForm(this);">
-        <fieldset>
-            <div class="formData">
-
-              <label class="field" for="usernames">Username:</label>
-              <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
-                                                                          echo $username;
-                                                                        } ?>" name="usernames" id="usernames" /></div>
-
-              <label class="field" for="passwords">Password:</label>
-              <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
-                                                                          echo $password;
-                                                                        } ?>" name="passwords" id="passwords" /></div>
-
-              <label class="field" for="userTypes">Type (admin/user):</label>
-              <div class="value"><input type="text" size="10" maxlength="10" value="<?php if ($havePost && $errors != '') {
-                                                                                          echo $userType;
-                                                                                      } ?>" name="userTypes" id="userTypes" /></div>
-
-              <input type="submit" value="save" id="save" name="save" />
-            </div>
-        </fieldset>
-      </form>
-
-
-
-      <h3 id=updateLabHeader style='display:none;'>Add/Delete Labs</h3>
-      <form id="editlabs" name="editlabs" action="index.php" method="post" style='display: none;' onsubmit="return checkForm(this);">
-        <fieldset>
-            <div class="formData">
-              <label class="field" for="labnames" id='labnamesLabel'>Lab Name:</label>
-              <div class="value" id='labnamesInput'><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
-                                                                          echo $labname;
-                                                                        } ?>" name="labnames" id="labnames" /></div>
-                                                                        
-              <label class="field" for="lablandings" id='lablandingsLabel'>Lab Landing:</label>
-              <div class="value" id='lablandingsInput'><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
-                                                                          echo $lablanding;
-                                                                        } ?>" name="lablandings" id="lablandings" /></div>
-
-              <input type="submit" value="saveLab" id="saveLab" name="saveLab" />
-              <input type="submit" value="logout" id="logout" name="logout" />
-            </div>
-        </fieldset>
-      </form>
-
-      <table id="labsTable" style='display: none;'>
-        <?php
-        if ($dbOk) {
-
-            $query = 'select * from myLabs order by title';//all fields=*
-            $result = $db->query($query);
-            $numRecords = $result->num_rows;
-
-            echo '<tr><th>Lab Name:</th><th>Lab Landing:</th><th></th></tr>';
-            for ($i = 0; $i < $numRecords; $i++) {
-              $record = $result->fetch_assoc();
-              if ($i % 2 == 0) {
-                  echo "\n" . '<tr id="lab-' . $record['labid'] . '"><td>';
-              } else {
-                  echo "\n" . '<tr class="odd" id="lab-' . $record['labid'] . '"><td>';
-              }
-              echo htmlspecialchars($record['title']);
-              echo '</td><td>';
-              echo htmlspecialchars($record['landing']);
-              echo '</td><td>';
-              echo '<img src="labs/lab9/resources/delete.png" class="deleteLab" width="16" height="16" alt="delete lab"/>';
-              echo '</td></tr>';
-              // Uncomment the following three lines to see the underlying
-              // associative array for each record.
-              // echo '<tr><td colspan="3" style="white-space: pre;">';
-              // print_r($record);
-              // echo '</td></tr>';
-            }
-
-            $result->free();
-
-            // Finally, let's close the database
-            $db->close();
-        }
-        
-        
-        ?>
-</table>   
-
-      
-
 <?php
 
   // $dbOk=false;
@@ -265,6 +163,96 @@
 
   }
 ?>
+      
+      <h3 id='loginHeader'>Login Form</h3>
+      <form id="loginform" name="loginform" action="index.php" method="post" onsubmit="return checkForm(this);">
+        <fieldset>
+            <div class="formData">
+
+              <label class="field" for="usernames">Username:</label>
+              <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
+                                                                          echo $username;
+                                                                        } ?>" name="usernames" id="usernames" /></div>
+
+              <label class="field" for="passwords">Password:</label>
+              <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
+                                                                          echo $password;
+                                                                        } ?>" name="passwords" id="passwords" /></div>
+
+              <label class="field" for="userTypes">Type (admin/user):</label>
+              <div class="value"><input type="text" size="10" maxlength="10" value="<?php if ($havePost && $errors != '') {
+                                                                                          echo $userType;
+                                                                                      } ?>" name="userTypes" id="userTypes" /></div>
+
+              <input type="submit" value="save" id="save" name="save" />
+            </div>
+        </fieldset>
+      </form>
+
+
+
+      <h3 id=updateLabHeader style='display:none;'>Add/Delete Labs</h3>
+      <form id="editlabs" name="editlabs" action="index.php" method="post" style='display: none;' onsubmit="return checkForm(this);">
+        <fieldset>
+            <div class="formData">
+              <label class="field" for="labnames" id='labnamesLabel'>Lab Name:</label>
+              <div class="value" id='labnamesInput'><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
+                                                                          echo $labname;
+                                                                        } ?>" name="labnames" id="labnames" /></div>
+                                                                        
+              <label class="field" for="lablandings" id='lablandingsLabel'>Lab Landing:</label>
+              <div class="value" id='lablandingsInput'><input type="text" size="60" value="<?php if ($havePost && $errors != '') {
+                                                                          echo $lablanding;
+                                                                        } ?>" name="lablandings" id="lablandings" /></div>
+
+              <input type="submit" value="saveLab" id="saveLab" name="saveLab" />
+              <input type="submit" value="logout" id="logout" name="logout" />
+            </div>
+        </fieldset>
+      </form>
+
+      <table id="labsTable" style='display: none;'>
+        <?php
+        if ($dbOk) {
+
+            $query = 'select * from myLabs order by title';//all fields=*
+            $result = $db->query($query);
+            $numRecords = $result->num_rows;
+
+            echo '<tr><th>Lab Name:</th><th>Lab Landing:</th><th></th></tr>';
+            for ($i = 0; $i < $numRecords; $i++) {
+              $record = $result->fetch_assoc();
+              if ($i % 2 == 0) {
+                  echo "\n" . '<tr id="lab-' . $record['labid'] . '"><td>';
+              } else {
+                  echo "\n" . '<tr class="odd" id="lab-' . $record['labid'] . '"><td>';
+              }
+              echo htmlspecialchars($record['title']);
+              echo '</td><td>';
+              echo htmlspecialchars($record['landing']);
+              echo '</td><td>';
+              echo '<img src="labs/lab9/resources/delete.png" class="deleteLab" width="16" height="16" alt="delete lab"/>';
+              echo '</td></tr>';
+              // Uncomment the following three lines to see the underlying
+              // associative array for each record.
+              // echo '<tr><td colspan="3" style="white-space: pre;">';
+              // print_r($record);
+              // echo '</td></tr>';
+            }
+
+            $result->free();
+
+            // Finally, let's close the database
+            $db->close();
+        }
+        
+        
+        ?>
+</table>   
+
+      
+
+
 
 
 <?php include('Quiz3/includes/footer.php');?>
