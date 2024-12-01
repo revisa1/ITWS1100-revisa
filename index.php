@@ -2,6 +2,18 @@
 <?php 
   include('Quiz3/includes/conn.php');
   include('Quiz3/includes/headernav.php');
+  
+  $dbOk=false;
+
+  @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
+
+
+  if ($db->connect_error){
+    echo '<div class="messages">Could not connect to the database. Error: ';
+    echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
+  } else {
+    $dbOk = true;
+  }
 ?>
 
     
@@ -62,7 +74,7 @@
 
       <table id="labsTable" style='display: none;'>
         <?php
-        // if ($dbOk) {
+        if ($dbOk) {
 
             $query = 'select * from myLabs order by title';//all fields=*
             $result = $db->query($query);
@@ -93,24 +105,24 @@
 
             // Finally, let's close the database
             $db->close();
-        // }
+        }
         
         
         ?>
 </table>   
 <?php
 
-  $dbOk=false;
-  // $loggedIn=false;
-  @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
-  //@$db = new mysqli('localhost', 'root', 'nlg7ejrB_', 'mySite');
+  // $dbOk=false;
 
-  if ($db->connect_error){
-    echo '<div class="messages">Could not connect to the database. Error: ';
-    echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
-  } else {
-    $dbOk = true;
-  }
+  // @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
+
+
+  // if ($db->connect_error){
+  //   echo '<div class="messages">Could not connect to the database. Error: ';
+  //   echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
+  // } else {
+  //   $dbOk = true;
+  // }
   $havePost=isset($_POST['save']);
   $haveLabPost=isset($_POST['saveLab']);
   $haveLogout=isset($_POST['logout']);
