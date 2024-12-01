@@ -50,9 +50,9 @@ $(document).on('click', '.deleteLab', function() {
     // get the id of the clicked element's row
   var curId = $(this).closest("tr").attr("id");
     // Extract the db id of the actor from the dom id of the clicked element
-  var actorId = curId.substr(curId.indexOf("-")+1);
+  var labId = curId.substr(curId.indexOf("-")+1);
     // Build the data to send. 
-  var postData = "id=" + actorId;
+  var postData = "id=" + labId;
     // we could also format this as json ... jQuery will (by default) 
     // convert it into a query string anyway, e.g. 
     // var postData = { "id" : actorId };
