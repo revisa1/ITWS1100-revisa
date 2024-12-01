@@ -62,7 +62,7 @@
 
       <table id="labsTable" style='display: none;'>
         <?php
-        if ($dbOk) {
+        // if ($dbOk) {
 
             $query = 'select * from myLabs order by title';//all fields=*
             $result = $db->query($query);
@@ -93,7 +93,7 @@
 
             // Finally, let's close the database
             $db->close();
-        }
+        // }
         
         
         ?>
