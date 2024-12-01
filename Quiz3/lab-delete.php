@@ -3,7 +3,7 @@
   
   /* Create a new database connection object, passing in the host, username,
      password, and database to use. The "@" suppresses errors. */
-  @ $db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['db']);
+  @$db=new mysqli($GLOBALS['svr'],$GLOBALS['user'],$GLOBALS['pwd'],$GLOBALS['database']);
   
   if ($db->connect_error) {
     $connectErrors = array(
@@ -15,13 +15,13 @@
   } else {
     if (isset($_POST["id"])) {
       // get our id and cast as an integer
-      $actorId = (int) $_POST["id"];
+      $labId = (int) $_POST["id"];
       
       // Setup a prepared statement. 
-      $query = "delete from actors where actorid = ?";
+      $query = "delete from myLabs where labid = ?";
       $statement = $db->prepare($query);
       // bind our variable to the question mark
-      $statement->bind_param("i",$actorId);
+      $statement->bind_param("i",$labId);
       // make it so:
       $statement->execute();
       
