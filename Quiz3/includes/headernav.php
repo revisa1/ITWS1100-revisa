@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script type='text/javascript' src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
-    <script type="text/javascript" src='<?php echo $GLOBALS . "Quiz3/resources/mysite.js"?>'></script>
+    <script type="text/javascript" src='<?php echo $GLOBALS['iit'] . "Quiz3/resources/mysite.js"?>'></script>
     <!-- <script type="text/javascript" src="Quiz3/resources/mysite.js"></script> -->
     <script type="text/javascript" src="Resources/lab8jQuery.js"></script> 
     <link rel="stylesheet" href="Resources/site.css">
