@@ -56,10 +56,11 @@
       <div class="navLinks">
         
         <?php
-          $projQuery='select landing from myLabs where name=grpDir';
+          $projQuery='select landing from myProjects where name="grpDir"';
           $projRes=$db->query($projQuery);
+          $pRow=$projRes->fetch_assoc();
           $relPath= $GLOBALS['iit'] . '../';
-          echo '<a href="' . htmlspecialchars(trim($projRes)) . '">Group Directory </a>';    
+          echo '<a href="' . $relPath. htmlspecialchars(trim($pRow['landing'])) . '">Group Directory </a>';    
           $db->close();
         ?>
 
