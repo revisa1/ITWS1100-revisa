@@ -47,7 +47,7 @@
               echo '<a href="'. $relPath . 'lab' .  htmlspecialchars(trim($row['labid'])). '/' . htmlspecialchars(trim($row['landing'])) . '">' .
               htmlspecialchars(trim($row['title'])) . '</a>';
             }
-            $db->close();
+            
             
           ?>
 
@@ -56,9 +56,11 @@
       <div class="navLinks">
         
         <?php
+          $projQuery='select landing from myLabs where name=grpDir';
+          $projRes=$db->query($projQuery);
           $relPath= $GLOBALS['iit'] . '../';
-          echo '<a href="' . $relPath . 'grpDir' . '">Group Directory </a>';    
-              
+          echo '<a href="' . htmlspecialchars(trim($projRes)) . '">Group Directory </a>';    
+          $db->close();
         ?>
 
       </div>

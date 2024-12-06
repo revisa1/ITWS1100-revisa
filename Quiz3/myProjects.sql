@@ -6,4 +6,4 @@ CREATE TABLE `myProjects` (
 );
 -- insert data into the tables
 INSERT INTO myProjects
-VALUES (1, 'grpDir', 'http://revisarpi.eastus.cloudapp.azure.com/grpDir/site/calendar.php');
+VALUES (1, 'grpDir', 'http://revisarpi.eastus.cloudapp.azure.com/grpDir/');
