@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+  include('../../Quiz3/includes/conn.php');
+  include('../../Quiz3/includes/headernav.php');
+?>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>lab 4</title>
@@ -34,7 +38,8 @@
       </div>
       <div class="navLinks"><a href="http://revisarpi.eastus.cloudapp.azure.com/grpDir">Group Directory</a></div>
       <div class="navLinks"><a href="../../contactInfo/cntct.html">Contact Info</a></div>
-    </div>
+    </div> -->
+    <head><link rel="alternate" type="application/rss+xml" title="arielleRevisPortfolioRSS" href="http://revisarpi.eastus.cloudapp.azure.com/iit/labs/lab04/rss.xml"></head>
     <div class="lab4">
       <h1>In this lab we created our own rss and atom feeds using data about our labs in our personal site:</h1>
       <li><a href="./rss.xml">RSS</a></li>
