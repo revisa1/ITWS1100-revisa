@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+  include('../Quiz3/includes/conn.php');
+  include('../Quiz3/includes/headernav.php');
+?>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>contact info</title>
@@ -32,7 +36,7 @@
       </div>
       <div class="navLinks"><a href="http://revisarpi.eastus.cloudapp.azure.com/grpDir">Group Directory</a></div>
       <div class="navLinks"><a href="./cntct.html">Contact Info</a></div>
-    </div>
+    </div> -->
 
     <div class="container">
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScM1IhPuYu0MyY0siGRd88anf396pVcZcsneFMlxBWV-fmOOw/viewform?embedded=true"></iframe>
