@@ -170,6 +170,11 @@
       .main #EBHS{
          margin: 0 0 0 760px;
       }
+      h1{
+         text-align:center;
+         font-size: 2em;
+         padding: 30px;
+      }
 
    </style>
 
