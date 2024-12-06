@@ -39,10 +39,10 @@
       </div>
       <div class="navLinks"><a href="http://revisarpi.eastus.cloudapp.azure.com/grpDir">Group Directory</a></div>
       <div class="navLinks"><a href="../../contactInfo/cntct.html">Contact Info</a></div>
-    </div>
+    </div>-->
     <div class="justText">
       <h1><strong>EVERYTHING</strong> you see, this <u>entire</u> site, was built for Lab 3</h1>
-    </div>-->
+    </div>
     <footer>
       <h1><strong>Thank You For Visiting!</strong></h1>
       <div class="footerLinks">
