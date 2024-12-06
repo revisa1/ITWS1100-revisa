@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+  include('../../Quiz3/includes/conn.php');
+  include('../../Quiz3/includes/headernav.php');
+?>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>lab 10</title>
@@ -33,7 +37,7 @@
       </div>
       <div class="navLinks"><a href="http://revisarpi.eastus.cloudapp.azure.com/grpDir">Group Directory</a></div>
       <div class="navLinks"><a href="../../contactInfo/cntct.html">Contact Info</a></div>
-    </div>
+    </div> -->
     <div class="justText">
       <h1>Lab 10 - Promoting our sites</h1>
       <h3>During this lab, we promoted our sites from password protection in our azure instances to have it publically
