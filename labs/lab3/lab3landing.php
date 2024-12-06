@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+  include('../../Quiz3/includes/conn.php');
+  include('../../Quiz3/includes/headernav.php');
+?>
+<!--<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>lab 3</title>
@@ -38,7 +42,7 @@
     </div>
     <div class="justText">
       <h1><strong>EVERYTHING</strong> you see, this <u>entire</u> site, was built for Lab 3</h1>
-    </div>
+    </div>-->
     <footer>
       <h1><strong>Thank You For Visiting!</strong></h1>
       <div class="footerLinks">
