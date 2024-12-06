@@ -157,7 +157,7 @@
         <div class="navLinks"><a href="../groupDirectory/grpdir.html">Group Directory</a></div>
         <div class="navLinks"><a href="../contactInfo/cntct.html">Contact Info</a></div>
       </div> -->
-      <head>    <style>
+      <style>
     
          @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
          *{
@@ -280,7 +280,7 @@
               margin: 0 0 0 760px;
            }
         
-         </style></head>
+         </style>
       <div class="sidenav">
         <a href="./rsmeLanding.html" id="onlineResume">Online Resume</a>
         <a href="../Resources/ArielleRevisResume2024.pdf" id="resumePDF" download>Document Resume</a>
