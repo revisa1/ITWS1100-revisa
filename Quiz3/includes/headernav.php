@@ -62,6 +62,6 @@
         ?>
 
       </div>
-      <div class="navLinks"><a id=contactLink>Contact Info</a></div>
+      <div class="navLinks"><a id=contactLink href='<?php echo $GLOBALS['iit'] . "contactInfo/cntct.php"?>'>Contact Info</a></div>
     </div>
       
