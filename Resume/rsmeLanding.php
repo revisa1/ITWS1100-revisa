@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+  include('../../Quiz3/includes/conn.php');
+  include('../../Quiz3/includes/headernav.php');
+?>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
    <title>Resume</title>
@@ -152,7 +156,131 @@
         </div>
         <div class="navLinks"><a href="../groupDirectory/grpdir.html">Group Directory</a></div>
         <div class="navLinks"><a href="../contactInfo/cntct.html">Contact Info</a></div>
-      </div>
+      </div> -->
+      <head>    <style>
+    
+         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+         *{
+              box-sizing: border-box;
+           }
+     
+          html {
+              width: 100%;
+           }
+     
+           .pageHeader {
+              font-family:'Times New Roman';
+              text-decoration-thickness: 3px;
+              padding: 15px;
+              text-align:center;
+              background-color:lightgray;
+              color: black;
+           }
+     
+           .contactInfo {
+              display:flex;
+              border-top: 2px solid black;
+              border-bottom: 2px solid black;
+              background-color: darkgrey;
+              justify-content:center;
+     
+           }
+     
+           .contactInfo .links {
+              padding: 14px 20px;
+              text-decoration-thickness: 1px;
+              font-family:'Times New Roman'
+           }
+     
+           .contactInfo .nLinks {
+              display: flex;
+              justify-content: center;
+              flex-wrap: nowrap;
+              font-family: 'Times New Roman';
+              padding:14px 7px;
+           }
+     
+           .contactInfo a:hover{
+              color: darkblue;
+              font-style:italic
+           }
+     
+           .row {
+              display: flex;
+              flex-wrap:wrap;
+              margin: 0;
+           }
+     
+           /* creates an uneven split between the side bar and the main body */
+           .side {
+              flex: 30%;
+              background-color: rgb(230, 226, 226);
+              padding:20px;     
+           }
+     
+           /* creates an uneven split between the side bar and the main body */
+           .main{
+              flex:70%;
+              background-color:white;
+              padding:20px;
+           }
+     
+           #resumePhoto img {
+              width: 95%;
+              height:auto;
+              border: 1px black;
+              border-radius: 24px;
+              padding:4px;
+              margin-top:3%;
+              box-shadow: 0 4px 8px 0 black;
+           }
+           
+           h3{
+              font-family:'Times New Roman';
+              text-decoration-line: underline;
+              margin-top:20px;
+              font-size:large
+            }
+     
+           ul{
+              list-style-type: disc;
+              margin-left:20px;
+            }
+           
+           p{
+              font-family: 'Times New Roman';
+           }
+     
+           /* creates a div with a border line at the bottom as a design 
+           seperator block between different sections of resume */
+           .line{
+              border-bottom: 1px solid black;
+           }
+           /* move the dates on the side bar all the way to the right */
+           .side .sBar{
+              margin: 0 0 0 50px;
+           }
+           /* fix the formatting for the date for CS1 */
+           .side #CS1{
+            margin: 0 0 0 100px;  
+           }
+     
+           /* move the dates in the right-body all the way to the right */
+           .main .mBar{
+              margin: 0 0 0 730px;
+           }
+     
+           /* fix the formatting for the dates for Playa Bowls */
+           .main #PB{
+              margin: 0 0 0 630px;
+           }
+     
+           /* fix the formatting for the dates for East Brunswick High School*/
+           .main #EBHS{
+              margin: 0 0 0 760px;
+           }
+        
+         </style></head>
       <div class="sidenav">
         <a href="./rsmeLanding.html" id="onlineResume">Online Resume</a>
         <a href="../Resources/ArielleRevisResume2024.pdf" id="resumePDF" download>Document Resume</a>
