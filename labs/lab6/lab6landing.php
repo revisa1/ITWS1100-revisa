@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+  include('../../Quiz3/includes/conn.php');
+  include('../../Quiz3/includes/headernav.php');
+?>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -36,8 +40,8 @@
     </div>
     <div class="navLinks"><a href="http://revisarpi.eastus.cloudapp.azure.com/grpDir">Group Directory</a></div>
     <div class="navLinks"><a href="../contactInfo/cntct.html">Contact Info</a></div>
-  </div>
-
+  </div> -->
+  <head><script src="lab6.js"></script></head>
   <div class="lab6tests">
       <h1>In this lab we utilized jquery to create interactive user elements. Here are a couple of tests you can do!</h1>
       <ul>
