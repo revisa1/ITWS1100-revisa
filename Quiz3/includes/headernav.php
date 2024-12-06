@@ -29,8 +29,8 @@
     </div>
 
     <div class="navbar">
-      <div class="navLinks"><a class=aboutMeLink>About Me</a></div>
-      <div class="navLinks"><a id=resumeLink>Resume</a></div>
+      <div class="navLinks" href='<?php echo $GLOBALS['iit'] . "aboutMe/aboutMe.php"?>'><a class=aboutMeLink>About Me</a></div>
+      <div class="navLinks" href='<?php echo $GLOBALS['iit'] . "Resume/rsmeLanding.php"?>'><a id=resumeLink>Resume</a></div>
       <div class="prjtLabs">
         <button class="prjtLabsBtn">Projects & Labs</button>
         <div class="prjtLabsContent">
