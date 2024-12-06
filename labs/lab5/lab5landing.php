@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+  include('../../Quiz3/includes/conn.php');
+  include('../../Quiz3/includes/headernav.php');
+?>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -35,7 +39,8 @@
       </div>
       <div class="navLinks"><a href="http://revisarpi.eastus.cloudapp.azure.com/grpDir">Group Directory</a></div>
       <div class="navLinks"><a href="../../contactInfo/cntct.html">Contact Info</a></div>
-    </div>
+    </div> -->
+   <head><script src="lab5.js"></script><head>
    <div id="bodyBlock">
       <h1>Intro to IT - Lab 5</h1>
       <h3>During this lab we learned how to utilize basic javascript and used it to create a contact form</h3>
