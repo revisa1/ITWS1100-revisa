@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php
+  include('../Quiz3/includes/conn.php')
   include('../Quiz3/includes/headernav.php');
   ?>
   <!-- <head>
