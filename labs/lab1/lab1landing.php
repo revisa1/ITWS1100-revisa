@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+  include('../Quiz3/includes/conn.php');
+  include('../Quiz3/includes/headernav.php');
+  ?>
+<!-- <!DOCTYPE html>
     <html lang="en">
         <head>
             <title>lab 1</title>
@@ -34,7 +38,7 @@
             </div>
             <div class="navLinks"><a href="http://revisarpi.eastus.cloudapp.azure.com/grpDir">Group Directory</a></div>
             <div class="navLinks"><a href="../../contactInfo/cntct.html">Contact Info</a></div>
-          </div>
+          </div> -->
        <h2><strong><em>*Disclaimer* </em></strong>This was our first introduction to html, gitHub, VS Code, etc. These screenshots show confirmation of the set up.</h2>
        <div id="hellowrld"> <a href="./lab1index.html">Hello World Page</a> </div>
        <div class="hlWrld">
