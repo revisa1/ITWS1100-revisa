@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <?php
+  include('../Quiz3/includes/headernav.php')
+  ?>
+  <!-- <head>
     <title>about me</title>
     <meta charset="UTF-8">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -10,7 +13,8 @@
     <link rel="stylesheet" href="../Resources/site.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <style>@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');</style>
-  </head>    
+  </head> 
+      -->
   <body>
     <div class="header">
         <a href ="./aboutMe.html"><img src="../Resources/logo.png" alt="Arielle Revis Logo"></a>
