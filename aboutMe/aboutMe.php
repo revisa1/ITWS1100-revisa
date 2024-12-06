@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <?php
-  include('../Quiz3/includes/headernav.php')
+  include('../Quiz3/includes/headernav.php');
   ?>
   <!-- <head>
     <title>about me</title>
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <style>@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');</style>
   </head> 
-      -->
+     
   <body>
     <div class="header">
         <a href ="./aboutMe.html"><img src="../Resources/logo.png" alt="Arielle Revis Logo"></a>
@@ -37,7 +37,7 @@
       </div>
       <div class="navLinks"><a href="http://revisarpi.eastus.cloudapp.azure.com/grpDir">Group Directory</a></div>
       <div class="navLinks"><a href="../contactInfo/cntct.html">Contact Info</a></div>
-    </div>
+    </div> -->
 
     <div class="abtMePg">
       <div class="abtMePgPhotos">
