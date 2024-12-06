@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+  include('../../Quiz3/includes/conn.php');
+  include('../../Quiz3/includes/headernav.php');
+?>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -12,8 +16,36 @@
    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
   
+
+</head>
+
+<body>
+
+   <div class="header">
+      <a href ="../../aboutMe/aboutMe.html"><img src="../../Resources/logo.png" alt="Arielle Revis Logo"></a>
+      <div class="headerContents">
+        <h1><strong>Arielle Revis Portfolio</strong></h1>
+        <h2><em>The one-stop shop to all things 'Arielle'</em></h2>
+      </div>
+      <div class="ui-widget">
+         <label for="labsearch">Lab Search: </label>
+         <input id="labs">
+       </div>
+   </div>
+   <div class="navbar">
+      <div class="navLinks"><a href="../../aboutMe/">About Me</a></div>
+      <div class="navLinks"><a href="../../Resume/rsmeLanding.html ">Resume</a></div>
+      <div class="prjtLabs">
+        <button class="prjtLabsBtn">Projects & Labs</button>
+        <div class="prjtLabsContent">
+        </div>
+      </div>
+      <div class="navLinks"><a href="http://revisarpi.eastus.cloudapp.azure.com/grpDir">Group Directory</a></div>
+      <div class="navLinks"><a href="../../contactInfo/cntct.html">Contact Info</a></div>
+   </div>
+    -->
 <!-- style body for all css selections -->
-   <style>
+<style>
      
      @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
@@ -140,33 +172,7 @@
       }
 
    </style>
-</head>
 
-<body>
-
-   <div class="header">
-      <a href ="../../aboutMe/aboutMe.html"><img src="../../Resources/logo.png" alt="Arielle Revis Logo"></a>
-      <div class="headerContents">
-        <h1><strong>Arielle Revis Portfolio</strong></h1>
-        <h2><em>The one-stop shop to all things 'Arielle'</em></h2>
-      </div>
-      <div class="ui-widget">
-         <label for="labsearch">Lab Search: </label>
-         <input id="labs">
-       </div>
-   </div>
-   <div class="navbar">
-      <div class="navLinks"><a href="../../aboutMe/">About Me</a></div>
-      <div class="navLinks"><a href="../../Resume/rsmeLanding.html ">Resume</a></div>
-      <div class="prjtLabs">
-        <button class="prjtLabsBtn">Projects & Labs</button>
-        <div class="prjtLabsContent">
-        </div>
-      </div>
-      <div class="navLinks"><a href="http://revisarpi.eastus.cloudapp.azure.com/grpDir">Group Directory</a></div>
-      <div class="navLinks"><a href="../../contactInfo/cntct.html">Contact Info</a></div>
-   </div>
-   
    <h1>In this lab we created our personal resumes using in-page css and html.</h1>
 
 
