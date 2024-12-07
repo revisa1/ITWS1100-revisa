@@ -23,13 +23,12 @@ function getLabspath(){
 	for (var i=0; i<depth; i++){
 		path+=('../');
 	}
-	
-
 	return path+'iit/labs'
-
 }
 
 
+
+/*
 $.ajax({
 	type: 'GET',
 	url: getJSONpath(),
@@ -45,6 +44,7 @@ $.ajax({
 	  alert('There was a problem: ' + msg.status + ' ' + msg.statusText);
 	}
 });	
+*/
 
 //jQuery UI function for autocomplete
 $(function() {
@@ -53,16 +53,16 @@ $(function() {
 
 
     var availableTags = [
-      { label: "Lab 1", url: basepath+'/lab01/lab1landing.html' },
-      { label: "Lab 2", url: basepath+'/lab02/revisa-ariellerevis-resume.html' },
-      { label: "Lab 3", url: basepath+'/lab03/lab3landing.html' },
-      { label: "Lab 4", url: basepath+'/lab04/lab4landing.html' },
-      { label: "Lab 5", url: basepath+'/lab05/lab5landing.html' },
-      { label: "Lab 6", url: basepath+'/lab06/lab6landing.html' },
-      { label: "Lab 7", url: basepath+'/lab07/lab7landing.html' },
-      { label: "Lab 8", url: basepath+'/lab08/lab8landing.html' },
-	  { label: "Lab 9", url: basepath+'/lab09/index.php' },
-	  { label: "Lab 10", url: basepath+'/lab10/lab10landing.html' }
+      { label: "Lab 1", url: basepath+'/lab1/lab1landing.php' },
+      { label: "Lab 2", url: basepath+'/lab2/revisa-ariellerevis-resume.php' },
+      { label: "Lab 3", url: basepath+'/lab3/lab3landing.php' },
+      { label: "Lab 4", url: basepath+'/lab4/lab4landing.php' },
+      { label: "Lab 5", url: basepath+'/lab5/lab5landing.php' },
+      { label: "Lab 6", url: basepath+'/lab6/lab6landing.php' },
+      { label: "Lab 7", url: basepath+'/lab7/lab7landing.php' },
+      { label: "Lab 8", url: basepath+'/lab8/lab8landing.php' },
+	  { label: "Lab 9", url: basepath+'/lab9/index.php' },
+	  { label: "Lab 10", url: basepath+'/lab10/lab10landing.php' }
     ];
   
     $("#labs").autocomplete({
