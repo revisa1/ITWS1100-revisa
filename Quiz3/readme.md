@@ -28,5 +28,6 @@ Labs are added, they just need a refresh to populate into the projects and labs 
 IA structure:
 aboutme, contact, labs, resources, resume, quiz3 are the main folders. outside these folders, there was the initial index.html which I have shipped, the current index.php, readme for the entire site, and htaccess. Within aboutme, contact, and resume there just contains a single php file(I changed from html so that I could dynamically load the header on each page). The labs folder contains the information for each lab within its respective folder, resources contains site-wide information, and quiz3 contains quiz3 contents. 
 
-
+user: guest
+password: 34hjp68s/kv
 
